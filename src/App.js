@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  const [view, setView] = useState("faq");
+  const [view, setView] = useState("");
 
   // update view based on view param ("v")
   useEffect(() => {
@@ -12,6 +12,8 @@ function App() {
     const viewParam = urlParams.get("v");
     if (viewParam) {
       setView(viewParam);
+    } else {
+      setView("faq");
     }
   }, []);
 
@@ -19,12 +21,82 @@ function App() {
 }
 
 const getContent = (view) => {
+  if (view === "") {
+    return null;
+  }
+
   if (view === "premium") {
-    return <div>this da premium</div>;
+    return (
+      <div>
+        <h2>shortfuts premium features</h2>
+
+        <div className="faq">
+          <span className="question">search + buy now (hands-free BIN)</span>
+          <span className="answer">
+            This is a shortcut that combines shortcuts (search and buy now) to
+            create a very powerful shortcut that'll allow you to search and
+            immediately buy the first result on the page. Perfect for sniping!
+          </span>
+        </div>
+
+        <div className="faq">
+          <span className="question">
+            FUT Alert integration (real-time prices)
+          </span>
+          <span className="answer">
+            Use the "display pricing data" shortcut to get the latest pricing
+            data from FUT Alert brought directly into the web app so you can
+            ensure you're buying or selling at the right price.
+          </span>
+        </div>
+
+        <div className="faq">
+          <span className="question">
+            more powerful sniping (disable safety settings)
+          </span>
+          <span className="answer">
+            You can disable the "buy now delay" and "frequent search warning"
+            settings when you're premium. While these settings are there to make
+            shortfuts a little safer, you can be comfortable disabling them (so
+            long as you don't go crazy with it).
+          </span>
+        </div>
+
+        <div className="faq">
+          <span className="question">sniping guard (ignore back setting)</span>
+          <span className="answer">
+            This setting helps prevent you backing out of search results if
+            you're sniping quickly. If there's a search result and you have this
+            setting enabled, shortfuts will ignore the "back" shortcut
+            momentarily so you don't miss a snipe.
+          </span>
+        </div>
+
+        <div className="faq">
+          <span className="question">sniping filter presets</span>
+          <span className="answer">
+            Premium users can save up to 5 sniping filter presets. After you
+            create your sniping filter presets, then you can easily load them up
+            with a shortcut.
+          </span>
+        </div>
+
+        <div className="faq">
+          <span className="question">select most recently listed card</span>
+          <span className="answer">
+            This setting will automatically select the most recently listed
+            search result on the page which will give you a better chance at the
+            snipe.
+          </span>
+        </div>
+      </div>
+    );
   } else {
     // faq
     return (
       <div>
+        <h2>shortfuts faq</h2>
+
         <div className="faq">
           <span className="question">What is shortfuts?</span>
           <span className="answer">
