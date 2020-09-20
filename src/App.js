@@ -204,6 +204,59 @@ const getContent = (view) => {
         </p>
       </div>
     );
+  } else if (view === "annual") {
+    return (
+      <div>
+        <h2>shortfuts premium for FIFA 21</h2>
+
+        <div className="faq">
+          <span className="question">
+            How can I buy premium for all of FIFA 21?
+          </span>
+          <span className="answer">
+            If you'd rather not have another subscription and want to purchase
+            premium access for the remainder of the current FIFA, you can!
+            Because of limitations Google has placed on the Chrome Web Store
+            because of COVID-19, the only way to buy premium for all of FIFA 21
+            is via PayPal. <br />
+            <br /> If PayPal doesn't work for you, you can always subscribe via
+            the Chrome Web Store through the app. <br />
+            <br /> Please follow all of the instructions (or else I'll simply
+            refund your payment and let you try again).
+            <ol>
+              <li>
+                Find the email address you use for the Chrome Web Store by
+                visiting{" "}
+                <a href="http://chrome.google.com/webstore" target="_blank">
+                  this link
+                </a>{" "}
+                and looking at the top-right corner. Copy this email address to
+                your clipboard.
+              </li>
+              <li>
+                Use{" "}
+                <a
+                  href="https://www.paypal.com/paypalme/martellaj/15usd"
+                  target="_blank"
+                >
+                  this link
+                </a>{" "}
+                to send me $15 USD. When you click "Next", you'll be brought to
+                a screen where you can add a note. Please paste your Chrome Web
+                Store email address in the note section. If you miss this step,
+                I will charge you an extra $5 USD when you try again.
+              </li>
+              <li>
+                Be patient. This is a manual process. I will do my best to
+                process your payment as fast as I can (generally within 48
+                hours). When your payment is processed, you will receive an
+                email with an install link.
+              </li>
+            </ol>
+          </span>
+        </div>
+      </div>
+    );
   } else {
     // faq
     return (
