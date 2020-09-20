@@ -214,6 +214,14 @@ const getContent = (view) => {
             How can I buy premium for all of FIFA 21?
           </span>
           <span className="answer">
+            <br />
+            <strong>
+              Until an official announcement has been made by shortfuts saying
+              that shortfuts for FIFA 21 is supported, please refrain from
+              purchasing!
+            </strong>
+            <br />
+            <br />
             If you'd rather not have another subscription and want to purchase
             premium access for the remainder of the current FIFA, you can!
             Because of limitations Google has placed on the Chrome Web Store
