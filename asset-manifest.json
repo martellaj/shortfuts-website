@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/shortfuts-website/static/css/main.e25ef645.chunk.css",
-    "main.js": "/shortfuts-website/static/js/main.49ab5633.chunk.js",
-    "main.js.map": "/shortfuts-website/static/js/main.49ab5633.chunk.js.map",
+    "main.css": "/shortfuts-website/static/css/main.a5794a4d.chunk.css",
+    "main.js": "/shortfuts-website/static/js/main.3a09fb78.chunk.js",
+    "main.js.map": "/shortfuts-website/static/js/main.3a09fb78.chunk.js.map",
     "runtime-main.js": "/shortfuts-website/static/js/runtime-main.70c927a4.js",
     "runtime-main.js.map": "/shortfuts-website/static/js/runtime-main.70c927a4.js.map",
     "static/js/2.b8efd510.chunk.js": "/shortfuts-website/static/js/2.b8efd510.chunk.js",
     "static/js/2.b8efd510.chunk.js.map": "/shortfuts-website/static/js/2.b8efd510.chunk.js.map",
     "index.html": "/shortfuts-website/index.html",
-    "precache-manifest.11d392e1e683223aad06a5e684a8c1c6.js": "/shortfuts-website/precache-manifest.11d392e1e683223aad06a5e684a8c1c6.js",
+    "precache-manifest.80ce1c1cd382294f6b5b3b9e4e7d7471.js": "/shortfuts-website/precache-manifest.80ce1c1cd382294f6b5b3b9e4e7d7471.js",
     "service-worker.js": "/shortfuts-website/service-worker.js",
-    "static/css/main.e25ef645.chunk.css.map": "/shortfuts-website/static/css/main.e25ef645.chunk.css.map",
+    "static/css/main.a5794a4d.chunk.css.map": "/shortfuts-website/static/css/main.a5794a4d.chunk.css.map",
     "static/js/2.b8efd510.chunk.js.LICENSE.txt": "/shortfuts-website/static/js/2.b8efd510.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.70c927a4.js",
     "static/js/2.b8efd510.chunk.js",
-    "static/css/main.e25ef645.chunk.css",
-    "static/js/main.49ab5633.chunk.js"
+    "static/css/main.a5794a4d.chunk.css",
+    "static/js/main.3a09fb78.chunk.js"
   ]
 }
