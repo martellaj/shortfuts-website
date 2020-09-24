@@ -215,10 +215,10 @@ const getContent = (view) => {
           </span>
           <span className="answer">
             <br />
-            <strong>
+            <strong style={{backgroundColor: 'red'}}>
               Until an official announcement has been made by shortfuts saying
               that shortfuts for FIFA 21 is supported, please refrain from
-              purchasing!
+              purchasing! If you choose to buy early, please note that no refunds will be given if shortfuts premium cannot happen for any reason.
             </strong>
             <br />
             <br />
@@ -297,6 +297,14 @@ const getContent = (view) => {
           <span className="question">
             How can I buy premium without using the Chrome Web Store?
           </span>
+          <br />
+            <strong style={{backgroundColor: 'red'}}>
+              Until an official announcement has been made by shortfuts saying
+              that shortfuts for FIFA 21 is supported, please refrain from
+              purchasing! If you choose to buy early, please note that no refunds will be given if shortfuts premium cannot happen for any reason.
+            </strong>
+            <br />
+            <br />
           <span className="answer">
             You can purchase premium access for the remainder of the current
             FIFA using PayPal. Please follow all of the instructions (or else
