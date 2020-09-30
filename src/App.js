@@ -276,6 +276,24 @@ const getContent = (view) => {
         </div>
       </div>
     );
+  } else if (view === "install2") {
+    return (
+      <div>
+        <h2>shortfuts premium for FIFA 21</h2>
+
+        <div className="faq">
+          Thanks for purchasing shortfuts premium for FIFA 21!
+          <br />
+          <br />
+          Install a premium version of shortfuts using this link: <a target="_blank" href="https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/nnipdfpcchbdmlcpjhkchdlhfceggpba">https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/nnipdfpcchbdmlcpjhkchdlhfceggpba</a>
+          <br />
+          Please make sure you disable or uninstall the regular version of shortfuts so the 2 versions do not collide with each other!
+          <br />
+          <br />
+          Happy trading!
+        </div>
+      </div>
+    );
   } else {
     // faq
     return (
