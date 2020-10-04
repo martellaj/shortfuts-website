@@ -405,6 +405,10 @@ const getContent = (view) => {
           <button onClick={onTipClick} style={{ width: "200px" }}>
             buy me a ☕
           </button>
+          <p>
+            If this fails for you for whatever reason, please let me know via
+            Discord, Twitter, or email. Thank you!
+          </p>
         </div>
       </div>
     );
