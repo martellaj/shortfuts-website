@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import { loadStripe } from "@stripe/stripe-js";
+
+// test
+// const stripePromise = loadStripe("pk_test_CzSGkLAPEdl9VcVmDNKvGd8Q00x4IyVhbt");
+
+// prod
+const stripePromise = loadStripe("pk_live_Dd6tmAPDrcaK7m20TDG1OhjI00MZibIg97");
 
 function App() {
   const [view, setView] = useState("");
@@ -18,6 +25,53 @@ function App() {
 
   return <div className="App">{getContent(view)}</div>;
 }
+
+const handleClick = async (event) => {
+  // Get Stripe.js instance
+  const stripe = await stripePromise;
+
+  // Call your backend to create the Checkout Session
+  // const response = await fetch('https://shortfuts-server.azurewebsites.net/purchase-annual', { method: 'POST' });
+  const response = await fetch("http://localhost:3000/purchase-monthly", {
+    method: "POST",
+  });
+
+  const session = await response.json();
+
+  // When the customer clicks on the button, redirect them to Checkout.
+  const result = await stripe.redirectToCheckout({
+    sessionId: session.id,
+  });
+
+  if (result.error) {
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `result.error.message`.
+  }
+};
+
+const onTipClick = async () => {
+  // Get Stripe.js instance
+  const stripe = await stripePromise;
+
+  // Call your backend to create the Checkout Session
+  const response = await fetch("https://shortfuts-server.herokuapp.com/tip", {
+    method: "POST",
+  });
+
+  const session = await response.json();
+
+  // When the customer clicks on the button, redirect them to Checkout.
+  const result = await stripe.redirectToCheckout({
+    sessionId: session.id,
+  });
+
+  if (result.error) {
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `result.error.message`.
+  }
+};
 
 const getContent = (view) => {
   if (view === "") {
@@ -267,9 +321,16 @@ const getContent = (view) => {
           Thanks for purchasing shortfuts premium for FIFA 21!
           <br />
           <br />
-          Install a premium version of shortfuts using this link: <a target="_blank" href="https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/mdchpfpjdphgknacgbbalnpjljjdabkb">https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/mdchpfpjdphgknacgbbalnpjljjdabkb</a>
+          Install a premium version of shortfuts using this link:{" "}
+          <a
+            target="_blank"
+            href="https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/mdchpfpjdphgknacgbbalnpjljjdabkb"
+          >
+            https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/mdchpfpjdphgknacgbbalnpjljjdabkb
+          </a>
           <br />
-          Please make sure you disable or uninstall the regular version of shortfuts so the 2 versions do not collide with each other!
+          Please make sure you disable or uninstall the regular version of
+          shortfuts so the 2 versions do not collide with each other!
           <br />
           <br />
           Happy trading!
@@ -285,15 +346,70 @@ const getContent = (view) => {
           Thanks for purchasing shortfuts premium for FIFA 21!
           <br />
           <br />
-          Install a premium version of shortfuts using this link: <a target="_blank" href="https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/nnipdfpcchbdmlcpjhkchdlhfceggpba">https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/nnipdfpcchbdmlcpjhkchdlhfceggpba</a>
+          Install a premium version of shortfuts using this link:{" "}
+          <a
+            target="_blank"
+            href="https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/nnipdfpcchbdmlcpjhkchdlhfceggpba"
+          >
+            https://chrome.google.com/webstore/detail/shortfuts-premium-for-fif/nnipdfpcchbdmlcpjhkchdlhfceggpba
+          </a>
           <br />
-          Please make sure you disable or uninstall the regular version of shortfuts so the 2 versions do not collide with each other!
+          Please make sure you disable or uninstall the regular version of
+          shortfuts so the 2 versions do not collide with each other!
           <br />
           <br />
           Happy trading!
         </div>
       </div>
     );
+  } else if (view === "purchase") {
+    return (
+      <>
+        <button role="link" onClick={handleClick}>
+          Checkout
+        </button>
+
+        <button role="link" onClick={handleClick}>
+          Unsubscribe
+        </button>
+      </>
+    );
+  } else if (view === "purchase_success") {
+    return <div>thanks for buying</div>;
+  } else if (view === "purchase_cancel") {
+    return <div>thanks for canceling</div>;
+  } else if (view === "tip") {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h2>buy Joe a coffee</h2>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          Thanks for using shortfuts and thanks for considering leaving me a
+          tip! Most tips will go towards my espresso addiction!
+          <br />
+          <br />
+          <button onClick={onTipClick} style={{ width: "200px" }}>
+            buy me a ☕
+          </button>
+        </div>
+      </div>
+    );
+  } else if (view == "tipthanks") {
+    return <div>Thanks so much for the tip! It's very much appreciated!</div>;
   } else {
     // faq
     return (
