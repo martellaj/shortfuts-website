@@ -366,6 +366,28 @@ const getContent = (view) => {
         </div>
       </div>
     );
+  } else if (view === "auto") {
+    return (
+      <div>
+        <h2>shortfuts auto for FIFA 21</h2>
+
+        <div className="faq">
+          Thanks for purchasing shortfuts auto for FIFA 21!
+          <br />
+          <br />
+          Install shortfuts auto from this link:{" "}
+          <a
+            target="_blank"
+            href="https://chrome.google.com/webstore/detail/shortfuts-auto/licncdcgncjnmkfcbmdikknkgojihecb"
+          >
+            https://chrome.google.com/webstore/detail/shortfuts-auto/licncdcgncjnmkfcbmdikknkgojihecb
+          </a>
+          <br />
+          Send me an email or reach out on Discord (shortfuts#6568) to get an
+          invite to the shortfuts auto Discord server!
+        </div>
+      </div>
+    );
   } else if (view === "purchase") {
     return (
       <>
