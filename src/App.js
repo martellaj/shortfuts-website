@@ -14,6 +14,7 @@ function App() {
   const [option1, setOption1] = useState(false);
   const [option2, setOption2] = useState(false);
   const [option3, setOption3] = useState(false);
+  const [option4, setOption4] = useState(false);
 
   // update view based on view param ("v")
   useEffect(() => {
@@ -36,7 +37,9 @@ function App() {
         option2,
         setOption2,
         option3,
-        setOption3
+        setOption3,
+        option4,
+        setOption4
       )}
     </div>
   );
@@ -126,7 +129,9 @@ const getContent = (
   option2,
   setOption2,
   option3,
-  setOption3
+  setOption3,
+  option4,
+  setOption4
 ) => {
   if (view === "") {
     return null;
@@ -443,7 +448,7 @@ const getContent = (
       </div>
     );
   } else if (view === "buy") {
-    const enablePurchase = option1 && option2 && option3;
+    const enablePurchase = option1 && option2 && option3 && option4;
 
     return (
       <div style={{ textAlign: "center" }}>
@@ -492,6 +497,19 @@ const getContent = (
                 I understand that shortfuts premium is a subscription and that
                 if I cancel that subscription that I will lose access{" "}
                 <b>immediately</b>.
+              </label>
+            </div>
+
+            <div className="purchaseAgreementDiv">
+              <input
+                type="checkbox"
+                value={option4}
+                onChange={(e) => setOption4(e.target.checked)}
+              />
+              <label>
+                I understand that I have to use the credit card option and
+                cannot use the digital wallet option (i.e. Apple Pay, Google
+                Pay, etc.).
               </label>
             </div>
 
