@@ -11,6 +11,10 @@ const stripePromise = loadStripe("pk_live_Dd6tmAPDrcaK7m20TDG1OhjI00MZibIg97");
 function App() {
   const [view, setView] = useState("");
 
+  const [option1, setOption1] = useState(false);
+  const [option2, setOption2] = useState(false);
+  const [option3, setOption3] = useState(false);
+
   // update view based on view param ("v")
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -23,18 +27,60 @@ function App() {
     }
   }, []);
 
-  return <div className="App">{getContent(view)}</div>;
+  return (
+    <div className="App">
+      {getContent(
+        view,
+        option1,
+        setOption1,
+        option2,
+        setOption2,
+        option3,
+        setOption3
+      )}
+    </div>
+  );
 }
 
-const handleClick = async (event) => {
+const buyShortfutsMonthlySubscription = async (event) => {
   // Get Stripe.js instance
   const stripe = await stripePromise;
 
   // Call your backend to create the Checkout Session
-  // const response = await fetch('https://shortfuts-server.azurewebsites.net/purchase-annual', { method: 'POST' });
-  const response = await fetch("http://localhost:3000/purchase-monthly", {
-    method: "POST",
+  const response = await fetch(
+    "https://shortfuts-server.azurewebsites.net/purchase-monthly",
+    { method: "POST" }
+  );
+  // const response = await fetch("http://localhost:3000/purchase-monthly", {
+  //   method: "POST",
+  // });
+
+  const session = await response.json();
+
+  // When the customer clicks on the button, redirect them to Checkout.
+  const result = await stripe.redirectToCheckout({
+    sessionId: session.id,
   });
+
+  if (result.error) {
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `result.error.message`.
+  }
+};
+
+const buyShortfutsAnnualSubscription = async (event) => {
+  // Get Stripe.js instance
+  const stripe = await stripePromise;
+
+  // Call your backend to create the Checkout Session
+  const response = await fetch(
+    "https://shortfuts-server.azurewebsites.net/purchase-annual",
+    { method: "POST" }
+  );
+  // const response = await fetch("http://localhost:3000/purchase-annual", {
+  //   method: "POST",
+  // });
 
   const session = await response.json();
 
@@ -73,7 +119,15 @@ const onTipClick = async () => {
   }
 };
 
-const getContent = (view) => {
+const getContent = (
+  view,
+  option1,
+  setOption1,
+  option2,
+  setOption2,
+  option3,
+  setOption3
+) => {
   if (view === "") {
     return null;
   }
@@ -388,22 +442,144 @@ const getContent = (view) => {
         </div>
       </div>
     );
-  } else if (view === "purchase") {
-    return (
-      <>
-        <button role="link" onClick={handleClick}>
-          Checkout
-        </button>
+  } else if (view === "buy") {
+    const enablePurchase = option1 && option2 && option3;
 
-        <button role="link" onClick={handleClick}>
-          Unsubscribe
-        </button>
-      </>
+    return (
+      <div style={{ textAlign: "center" }}>
+        <h2>buy shortfuts premium</h2>
+        <p style={{ lineHeight: "1.8" }}>
+          There are 2 options for purchasing shortfuts premium. You can{" "}
+          <span style={{ backgroundColor: "lightyellow" }}>
+            subscribe monthly at $1.50 USD per month
+          </span>{" "}
+          or{" "}
+          <span style={{ backgroundColor: "lightblue" }}>
+            subscribe annually for $15.00 USD per year (
+            <strong>2 months free</strong>)
+          </span>
+          !
+        </p>
+        <div style={{ textAlign: "left" }}>
+          <strong>
+            To purchase either option, please read the following and check the
+            box to agree.
+          </strong>
+          <div style={{ marginTop: "12px" }}>
+            <div className="purchaseAgreementDiv">
+              <input
+                type="checkbox"
+                value={option1}
+                onChange={(e) => setOption1(e.target.checked)}
+              />
+              <label>
+                I will get my Chrome email address by visiting{" "}
+                <a href="http://chrome.google.com/webstore" target="_blank">
+                  this link
+                </a>{" "}
+                and looking at the top-right corner, and then{" "}
+                <b>I will use that email when I purchase shortfuts premium.</b>
+              </label>
+            </div>
+
+            <div className="purchaseAgreementDiv">
+              <input
+                type="checkbox"
+                value={option2}
+                onChange={(e) => setOption2(e.target.checked)}
+              />
+              <label>
+                I understand that shortfuts premium is a subscription and that
+                if I cancel that subscription that I will lose access{" "}
+                <b>immediately</b>.
+              </label>
+            </div>
+
+            <div className="purchaseAgreementDiv">
+              <input
+                type="checkbox"
+                value={option3}
+                onChange={(e) => setOption3(e.target.checked)}
+              />
+              <label>
+                I understand that shortfuts relies on the FUT web app and if,
+                for whatever reason, shortfuts cannot continue that{" "}
+                <b>I am not eligible for a refund of any kind.</b>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            marginTop: "40px",
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-around",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "175px",
+              justifyContent: "center",
+            }}
+          >
+            <button
+              role="link"
+              onClick={buyShortfutsMonthlySubscription}
+              disabled={!enablePurchase}
+              style={{ marginRight: "40px", marginRight: "0" }}
+            >
+              🚀 subscribe monthly
+            </button>
+            <b>$1.50/month</b>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "175px",
+              justifyContent: "center",
+            }}
+          >
+            <button
+              role="link"
+              onClick={buyShortfutsAnnualSubscription}
+              disabled={!enablePurchase}
+              style={{ marginRight: "40px", marginRight: "0" }}
+            >
+              🚀 subscribe annually
+            </button>
+            <b>$15.00/year</b>
+          </div>
+        </div>
+      </div>
     );
   } else if (view === "purchase_success") {
-    return <div>thanks for buying</div>;
-  } else if (view === "purchase_cancel") {
-    return <div>thanks for canceling</div>;
+    return (
+      <div style={{ textAlign: "center" }}>
+        <h2>thanks for purchasing shortfuts premium!</h2>
+        <div>
+          Your new <b>shortfuts premium subscription</b> can take up to{" "}
+          <span style={{ backgroundColor: "lightblue" }}>10 minutes</span> to
+          get activated! So please, set a 10 minute timer, grab a glass of cold
+          water, and go relax. When your timer ends, come back to your computer,
+          fully quit Google Chrome, and restart it and your subscription will be
+          active.
+        </div>
+        <br />
+        <div>
+          While you wait, feel free to stop by the{" "}
+          <a href="http://bit.ly/sf-discord" target="_blank">
+            Discord server
+          </a>{" "}
+          and say hello!
+        </div>
+      </div>
+    );
   } else if (view === "tip") {
     return (
       <div
