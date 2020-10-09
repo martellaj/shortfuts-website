@@ -160,6 +160,15 @@ const getContent = (
             data from FUT Alert brought directly into the web app so you can
             ensure you're buying or selling at the right price.
           </span>
+          <b
+            style={{
+              fontSize: "12px",
+              marginTop: "10px",
+              backgroundColor: "lightblue",
+            }}
+          >
+            NOTE: This feature is not available for users that play FIFA on PC.
+          </b>
         </div>
 
         <div className="faq">
