@@ -62,7 +62,7 @@ const buyShortfutsMonthlySubscription = async (event) => {
 
 const buyShortfutsForFifa21 = async (url) => {
   const confirmResponse = window.confirm(
-    "If you choose to purchase shortfuts premium with PayPal, you must make sure that the contact email you provide matches your Chrome Web Store email. If it doesn't match, your shortfuts premium will not work."
+    "If you choose to purchase shortfuts premium with PayPal, you must make sure that the contact email you provide matches your Chrome Web Store email.\n\nIf you pay with credit card, you must make sure that the contact email you provide matches your Chrome Web Store email.\n\nIf it doesn't match, your shortfuts premium will not work and you will not be refunded."
   );
 
   if (confirmResponse) {
