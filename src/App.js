@@ -72,30 +72,16 @@ const buyShortfutsMonthlySubscription = async (event) => {
   }
 };
 
-const buyShortfutsAnnualSubscription = async (event) => {
-  // Get Stripe.js instance
-  const stripe = await stripePromise;
-
-  // Call your backend to create the Checkout Session
-  const response = await fetch(
-    "https://shortfuts-server.azurewebsites.net/purchase-annual",
-    { method: "POST" }
+const buyShortfutsForFifa21 = async (event) => {
+  const confirmResponse = window.confirm(
+    "If you choose to purchase shortfuts premium with PayPal, you must make sure that the contact email you provide matches your Chrome Web Store email. If it doesn't match, your premium subscription will not work."
   );
-  // const response = await fetch("http://localhost:3000/purchase-annual", {
-  //   method: "POST",
-  // });
 
-  const session = await response.json();
-
-  // When the customer clicks on the button, redirect them to Checkout.
-  const result = await stripe.redirectToCheckout({
-    sessionId: session.id,
-  });
-
-  if (result.error) {
-    // If `redirectToCheckout` fails due to a browser or network
-    // error, display the localized error message to your customer
-    // using `result.error.message`.
+  if (confirmResponse) {
+    window.open(
+      "https://shortfuts.myshopify.com/products/shortfuts-premium-for-fifa-21",
+      "_blank"
+    );
   }
 };
 
@@ -469,15 +455,14 @@ const getContent = (
           </span>{" "}
           or{" "}
           <span style={{ backgroundColor: "lightblue" }}>
-            subscribe annually for $15.00 USD per year (
-            <strong>2 months free</strong>)
+            purchase for all of FIFA 21 for $15.00 USD
           </span>
           !
         </p>
         <div style={{ textAlign: "left" }}>
           <strong>
             To purchase either option, please read the following and check the
-            box to agree.
+            boxes to accept each statement.
           </strong>
           <div style={{ marginTop: "12px" }}>
             <div className="purchaseAgreementDiv">
@@ -516,9 +501,9 @@ const getContent = (
                 onChange={(e) => setOption4(e.target.checked)}
               />
               <label>
-                I understand that I have to use the credit card option and
-                cannot use the digital wallet option (i.e. Apple Pay, Google
-                Pay, etc.).
+                I understand that I cannot subscribe with the digital wallet
+                option (i.e. Apple Pay, Google Pay, etc.) and{" "}
+                <strong>have to use a credit card</strong>.
               </label>
             </div>
 
@@ -574,13 +559,13 @@ const getContent = (
           >
             <button
               role="link"
-              onClick={buyShortfutsAnnualSubscription}
+              onClick={buyShortfutsForFifa21}
               disabled={!enablePurchase}
               style={{ marginRight: "40px", marginRight: "0" }}
             >
-              🚀 subscribe annually
+              🚀 buy for FIFA 21
             </button>
-            <b>$15.00/year</b>
+            <b>$15.00 (one-time)</b>
           </div>
         </div>
       </div>
