@@ -13,8 +13,6 @@ function App() {
 
   const [option1, setOption1] = useState(false);
   const [option2, setOption2] = useState(false);
-  const [option3, setOption3] = useState(false);
-  const [option4, setOption4] = useState(false);
 
   // update view based on view param ("v")
   useEffect(() => {
@@ -30,17 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      {getContent(
-        view,
-        option1,
-        setOption1,
-        option2,
-        setOption2,
-        option3,
-        setOption3,
-        option4,
-        setOption4
-      )}
+      {getContent(view, option1, setOption1, option2, setOption2)}
     </div>
   );
 }
@@ -72,16 +60,13 @@ const buyShortfutsMonthlySubscription = async (event) => {
   }
 };
 
-const buyShortfutsForFifa21 = async (event) => {
+const buyShortfutsForFifa21 = async (url) => {
   const confirmResponse = window.confirm(
-    "If you choose to purchase shortfuts premium with PayPal, you must make sure that the contact email you provide matches your Chrome Web Store email. If it doesn't match, your premium subscription will not work."
+    "If you choose to purchase shortfuts premium with PayPal, you must make sure that the contact email you provide matches your Chrome Web Store email. If it doesn't match, your shortfuts premium will not work."
   );
 
   if (confirmResponse) {
-    window.open(
-      "https://shortfuts.myshopify.com/products/shortfuts-premium-for-fifa-21",
-      "_blank"
-    );
+    window.open(url, "_blank");
   }
 };
 
@@ -108,17 +93,7 @@ const onTipClick = async () => {
   }
 };
 
-const getContent = (
-  view,
-  option1,
-  setOption1,
-  option2,
-  setOption2,
-  option3,
-  setOption3,
-  option4,
-  setOption4
-) => {
+const getContent = (view, option1, setOption1, option2, setOption2) => {
   if (view === "") {
     return null;
   }
@@ -443,26 +418,23 @@ const getContent = (
       </div>
     );
   } else if (view === "buy") {
-    const enablePurchase = option1 && option2 && option3 && option4;
+    const enablePurchase = option1 && option2;
 
     return (
       <div style={{ textAlign: "center" }}>
         <h2>buy shortfuts premium</h2>
-        <p style={{ lineHeight: "1.8" }}>
-          There are 2 options for purchasing shortfuts premium. You can{" "}
+        <p style={{ lineHeight: "1.4" }}>
           <span style={{ backgroundColor: "lightyellow" }}>
-            subscribe monthly at $1.50 USD per month
+            shortfuts premium
           </span>{" "}
-          or{" "}
-          <span style={{ backgroundColor: "lightblue" }}>
-            purchase for all of FIFA 21 for $15.00 USD
-          </span>
-          !
+          is tied to your Google Chrome account. Use the buttons below to add
+          premium time (1 month, 3 months, or 12 months). You can add additional
+          premium time at any time!
         </p>
         <div style={{ textAlign: "left" }}>
           <strong>
-            To purchase either option, please read the following and check the
-            boxes to accept each statement.
+            Before purchasing, please read the following and check the boxes to
+            accept each statement.
           </strong>
           <div style={{ marginTop: "12px" }}>
             <div className="purchaseAgreementDiv">
@@ -477,7 +449,10 @@ const getContent = (
                   this link
                 </a>{" "}
                 and looking at the top-right corner, and then{" "}
-                <b>I will use that email when I purchase shortfuts premium.</b>
+                <b>
+                  I will use that email as my contact email when I purchase
+                  shortfuts premium.
+                </b>
               </label>
             </div>
 
@@ -486,32 +461,6 @@ const getContent = (
                 type="checkbox"
                 value={option2}
                 onChange={(e) => setOption2(e.target.checked)}
-              />
-              <label>
-                I understand that shortfuts premium is a subscription and that
-                if I cancel that subscription that I will lose access{" "}
-                <b>immediately</b>.
-              </label>
-            </div>
-
-            <div className="purchaseAgreementDiv">
-              <input
-                type="checkbox"
-                value={option4}
-                onChange={(e) => setOption4(e.target.checked)}
-              />
-              <label>
-                I understand that I cannot subscribe with the digital wallet
-                option (i.e. Apple Pay, Google Pay, etc.) and{" "}
-                <strong>have to use a credit card</strong>.
-              </label>
-            </div>
-
-            <div className="purchaseAgreementDiv">
-              <input
-                type="checkbox"
-                value={option3}
-                onChange={(e) => setOption3(e.target.checked)}
               />
               <label>
                 I understand that shortfuts relies on the FUT web app and if,
@@ -534,38 +483,69 @@ const getContent = (
             style={{
               display: "flex",
               flexDirection: "column",
-              width: "175px",
+              width: "125px",
               justifyContent: "center",
             }}
           >
             <button
               role="link"
-              onClick={buyShortfutsMonthlySubscription}
+              onClick={() => {
+                buyShortfutsForFifa21(
+                  "https://shortfuts.myshopify.com/products/copy-of-shortfuts-premium-1-month"
+                );
+              }}
               disabled={!enablePurchase}
               style={{ marginRight: "40px", marginRight: "0" }}
             >
-              🚀 subscribe monthly
+              🏆 buy 1 month
             </button>
-            <b>$1.50/month</b>
+            <b>$2.00/month</b>
           </div>
 
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              width: "175px",
+              width: "125px",
               justifyContent: "center",
             }}
           >
             <button
               role="link"
-              onClick={buyShortfutsForFifa21}
+              onClick={() => {
+                buyShortfutsForFifa21(
+                  "https://shortfuts.myshopify.com/products/copy-of-shortfuts-premium-6-months"
+                );
+              }}
               disabled={!enablePurchase}
               style={{ marginRight: "40px", marginRight: "0" }}
             >
-              🚀 buy for FIFA 21
+              🏆 buy 3 months
             </button>
-            <b>$15.00 (one-time)</b>
+            <b>$1.66/month</b>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "125px",
+              justifyContent: "center",
+            }}
+          >
+            <button
+              role="link"
+              onClick={() => {
+                buyShortfutsForFifa21(
+                  "https://shortfuts.myshopify.com/products/shortfuts-premium-for-fifa-21"
+                );
+              }}
+              disabled={!enablePurchase}
+              style={{ marginRight: "40px", marginRight: "0" }}
+            >
+              🏆 buy 12 months
+            </button>
+            <b>$1.25/month</b>
           </div>
         </div>
       </div>
