@@ -615,6 +615,78 @@ const getContent = (
     );
   } else if (view == "tipthanks") {
     return <div>Thanks so much for the tip! It's very much appreciated!</div>;
+  } else if (view === "migration") {
+    return (
+      <div>
+        <h2>shortfuts premium migration</h2>
+
+        <div className="faq">
+          <span className="question">What's going on?</span>
+          <span className="answer">
+            I've handled subscriptions and payments via the Chrome Web Store for
+            the last 2 years. This year - a week before the FUT web app launched
+            - I was notified by Google that they are deprecating their payment
+            system in the next few months and that I need to come up with a
+            different solution for payments.
+          </span>
+
+          <br />
+
+          <span className="question">What's the new solution?</span>
+          <span className="answer">
+            The new solution is simple. You have an account (pictured below) and
+            you add shortfuts premium time to that account via my new web store.
+            The app will now direct you to the{" "}
+            <a href="https://shortfuts.com?v=buy" target="_blank">
+              buy page
+            </a>{" "}
+            which will give you an option to buy 1 month, 3 months, or 12 months
+            (the price per month is cheaper the more months you buy).
+            <img style={{ marginTop: "4px" }} src={emailScreenshot} />
+          </span>
+
+          <br />
+
+          <span className="question">
+            What about my existing Chrome Web Store subscription?
+          </span>
+          <span className="answer">
+            Your Chrome Web Store subscription will continue to work until
+            December 31, 2020. Until then, you'll retain shortfuts premium
+            access while your subscription is active. However, I highly
+            encourage you to cancel your shortfuts premium subscription at the
+            end of your current month (you will lose shortfuts premium when you
+            cancel) and start adding shortfuts premium time via the new{" "}
+            <a href="https://shortfuts.com?v=buy" target="_blank">
+              buy page
+            </a>{" "}
+            as soon as possible. This will ensure there's no interruption in
+            your shortfuts premium access!
+            <div style={{ marginTop: "12px" }}>
+              To unsubscribe, simply go to your{" "}
+              <a
+                href="https://pay.google.com/payments/u/home#subscriptionsAndServices"
+                target="_blank"
+              >
+                Google Pay subscriptions
+              </a>{" "}
+              page to manage your subscription.
+            </div>
+          </span>
+
+          <br />
+
+          <span className="question">
+            What if I paid for shortfuts premium for FIFA 21?
+          </span>
+          <span className="answer">
+            This new process doesn't affect you! You will retain you shortfuts
+            premium until the end of FIFA 21. At that point, you can then start
+            adding shortfuts premium time to your account.
+          </span>
+        </div>
+      </div>
+    );
   } else {
     // faq
     return (
