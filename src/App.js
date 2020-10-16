@@ -14,6 +14,7 @@ function App() {
 
   const [option1, setOption1] = useState(false);
   const [option2, setOption2] = useState(false);
+  const [option3, setOption3] = useState(false);
 
   // update view based on view param ("v")
   useEffect(() => {
@@ -29,7 +30,15 @@ function App() {
 
   return (
     <div className="App">
-      {getContent(view, option1, setOption1, option2, setOption2)}
+      {getContent(
+        view,
+        option1,
+        setOption1,
+        option2,
+        setOption2,
+        option3,
+        setOption3
+      )}
     </div>
   );
 }
@@ -67,7 +76,15 @@ const onTipClick = async () => {
   }
 };
 
-const getContent = (view, option1, setOption1, option2, setOption2) => {
+const getContent = (
+  view,
+  option1,
+  setOption1,
+  option2,
+  setOption2,
+  option3,
+  setOption3
+) => {
   if (view === "") {
     return null;
   }
@@ -392,7 +409,7 @@ const getContent = (view, option1, setOption1, option2, setOption2) => {
       </div>
     );
   } else if (view === "buy") {
-    const enablePurchase = option1 && option2;
+    const enablePurchase = option1 && option2 && option3;
 
     return (
       <div style={{ textAlign: "center" }}>
@@ -430,6 +447,19 @@ const getContent = (view, option1, setOption1, option2, setOption2) => {
                   Copy the value after <strong>Your account:</strong>.
                 </span>
                 <img src={emailScreenshot} alt="logo" />
+              </label>
+            </div>
+
+            <div className="purchaseAgreementDiv">
+              <input
+                type="checkbox"
+                value={option3}
+                onChange={(e) => setOption3(e.target.checked)}
+              />
+              <label>
+                I understand that my shortfuts premium status may take up to{" "}
+                <b>10 minutes to update after purchasing</b> and I will not ask
+                about it until those 10 minutes are up.
               </label>
             </div>
 
