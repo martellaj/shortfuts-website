@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { loadStripe } from "@stripe/stripe-js";
+import emailScreenshot from "./email.png";
 
 // test
 // const stripePromise = loadStripe("pk_test_CzSGkLAPEdl9VcVmDNKvGd8Q00x4IyVhbt");
@@ -417,15 +418,18 @@ const getContent = (view, option1, setOption1, option2, setOption2) => {
                 onChange={(e) => setOption1(e.target.checked)}
               />
               <label>
-                I will get my Chrome email address by visiting{" "}
-                <a href="http://chrome.google.com/webstore" target="_blank">
-                  this link
-                </a>{" "}
-                and looking at the top-right corner, and then{" "}
+                I will get my shortfuts account by checking the app's pop-up,
+                and I will copy that email address and then{" "}
                 <b>
-                  I will use that email as my contact email when I purchase
-                  shortfuts premium.
+                  I will use that email address as my contact email when I
+                  purchase shortfuts premium.
                 </b>
+                <br />
+                <br />
+                <span style={{ marginTop: "4px", marginBottom: "4px" }}>
+                  Copy the value after <strong>Your account:</strong>.
+                </span>
+                <img src={emailScreenshot} alt="logo" />
               </label>
             </div>
 
@@ -470,7 +474,7 @@ const getContent = (view, option1, setOption1, option2, setOption2) => {
               disabled={!enablePurchase}
               style={{ marginRight: "40px", marginRight: "0" }}
             >
-              🏆 buy 1 month
+              🌟 buy 1 month
             </button>
             <b>$2.00/month</b>
           </div>
@@ -493,7 +497,7 @@ const getContent = (view, option1, setOption1, option2, setOption2) => {
               disabled={!enablePurchase}
               style={{ marginRight: "40px", marginRight: "0" }}
             >
-              🏆 buy 3 months
+              🌟 buy 3 months
             </button>
             <b>$1.66/month</b>
           </div>
@@ -516,7 +520,7 @@ const getContent = (view, option1, setOption1, option2, setOption2) => {
               disabled={!enablePurchase}
               style={{ marginRight: "40px", marginRight: "0" }}
             >
-              🏆 buy 12 months
+              🌟 buy 12 months
             </button>
             <b>$1.25/month</b>
           </div>
