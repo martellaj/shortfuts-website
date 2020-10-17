@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { loadStripe } from "@stripe/stripe-js";
 import emailScreenshot from "./email.png";
+import Buy from "./Buy";
 
 // test
 // const stripePromise = loadStripe("pk_test_CzSGkLAPEdl9VcVmDNKvGd8Q00x4IyVhbt");
@@ -408,7 +409,7 @@ const getContent = (
         </div>
       </div>
     );
-  } else if (view === "buy") {
+  } else if (view === "buyold") {
     const enablePurchase = option1 && option2 && option3;
 
     return (
@@ -557,6 +558,8 @@ const getContent = (
         </div>
       </div>
     );
+  } else if (view === "buy") {
+    return <Buy />;
   } else if (view === "purchase_success") {
     return (
       <div style={{ textAlign: "center" }}>
