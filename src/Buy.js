@@ -62,9 +62,8 @@ function Buy() {
             2. Get your shortfuts account email address
           </div>
           <div>
-            Simply open the app's pop-up, and copy the email address listed next
-            to "Your account". This email will be used as the{" "}
-            <strong>contact email</strong> for your purchase.
+            Open the app's pop-up and copy the email address listed next to
+            "Your account".
             <img style={{ marginTop: "6px" }} src={emailScreenshot} />
           </div>
 
@@ -99,12 +98,11 @@ function Buy() {
                 After you log into your PayPal and click "Purchase", you'll be
                 redirected back to the store page.{" "}
                 <span style={{ backgroundColor: "chartreuse" }}>
-                  At this point, you must make sure the contact email matches
-                  your shortfuts account email address.
+                  Make sure the contact email matches your shortfuts account
+                  email address.
                 </span>{" "}
                 By default, it'll be your PayPal email address. If they are not
-                the same, click the "Change" button and change it. This is
-                essential!
+                the same, click the "Change" button and change it.
               </div>
               <img style={{ marginTop: "6px" }} src={paypalScreenshot} />
             </div>
@@ -189,6 +187,9 @@ function Buy() {
                 width: "125px",
                 justifyContent: "center",
                 alignItems: "center",
+                border: "black solid 1px",
+                padding: "12px",
+                backgroundColor: "lightgoldenrodyellow",
               }}
             >
               <button
@@ -203,7 +204,7 @@ function Buy() {
               >
                 🌟 buy 12 months
               </button>
-              <em>$1.25/month</em>
+              <em style={{ fontWeight: "bold", color: "red" }}>$1.25/month</em>
             </div>
           </div>
         </div>
