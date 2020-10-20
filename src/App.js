@@ -720,52 +720,6 @@ const getContent = (
 
         <div className="faq">
           <span className="question">
-            How can I buy premium without using the Chrome Web Store?
-          </span>
-          <br />
-          <span className="answer">
-            You can purchase premium access for the remainder of the current
-            FIFA using PayPal. Please follow all of the instructions (or else
-            I'll simply refund your payment and let you try again).
-            <ol>
-              <li>
-                Find the email address you use for the Chrome Web Store by
-                visiting{" "}
-                <a href="http://chrome.google.com/webstore" target="_blank">
-                  this link
-                </a>{" "}
-                and looking at the top-right corner. Copy this email address to
-                your clipboard.
-              </li>
-              <li>
-                Use{" "}
-                <a
-                  href="https://www.paypal.com/paypalme/martellaj/15usd"
-                  target="_blank"
-                >
-                  this link
-                </a>{" "}
-                to send me $15 USD. When you click "Next", you'll be brought to
-                a screen where you can add a note.{" "}
-                <span style={{ backgroundColor: "lightblue" }}>
-                  Please paste your Chrome Web Store email address in the note
-                  section.
-                </span>{" "}
-                If you miss this step, I will charge you an extra $5 USD when
-                you try again.
-              </li>
-              <li style={{ backgroundColor: "lightblue" }}>
-                Be patient. This is a manual process. I will do my best to
-                process your payment as fast as I can{" "}
-                <strong>(generally within 48 hours)</strong>. When your payment
-                is processed, you will receive an email with an install link.
-              </li>
-            </ol>
-          </span>
-        </div>
-
-        <div className="faq">
-          <span className="question">
             How come by shortcuts aren't working?
           </span>
           <span className="answer">
