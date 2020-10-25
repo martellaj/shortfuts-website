@@ -70,7 +70,13 @@ function Buy() {
           {!step2Complete && (
             <button
               style={{ marginTop: "12px" }}
-              onClick={(e) => setStep2Complete(true)}
+              onClick={(e) => {
+                alert(
+                  "If you don't use this email address, your shortfuts premium will not work and you will not get refunded. So please make sure you use it!"
+                );
+
+                setStep2Complete(true);
+              }}
             >
               ✅ I got my shortfuts account email address!
             </button>
@@ -111,7 +117,15 @@ function Buy() {
           {!step3Complete && (
             <button
               style={{ marginTop: "12px" }}
-              onClick={(e) => setStep3Complete(true)}
+              onClick={(e) => {
+                if (purchaseOption === "PayPal") {
+                  alert(
+                    "Seriously! If you do not ensure your contact email address mataches the shortfuts account email address you got in the previous step, then your shortfuts premium will not work and you will not be refunded. Do not forget this step!"
+                  );
+                }
+
+                setStep3Complete(true);
+              }}
             >
               ✅ I understand!
             </button>
