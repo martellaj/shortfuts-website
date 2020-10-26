@@ -120,7 +120,7 @@ function Buy() {
               onClick={(e) => {
                 if (purchaseOption === "PayPal") {
                   alert(
-                    "Seriously! If you do not ensure your contact email address mataches the shortfuts account email address you got in the previous step, then your shortfuts premium will not work and you will not be refunded. Do not forget this step!"
+                    "Seriously! If you do not ensure your contact email address matches the shortfuts account email address you got in the previous step, then your shortfuts premium will not work and you will not be refunded. Do not forget this step!"
                   );
                 }
 
