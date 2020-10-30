@@ -28,3 +28,12 @@
   margin-top: 16px;
   margin-bottom: 16px;
 }
+
+.ting {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 12px;
+  padding: 36px;
+  background-color: lightgrey;
+  border: black solid 1px;
+}

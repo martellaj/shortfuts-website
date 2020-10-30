@@ -1,228 +1,119 @@
 import React, { useState } from "react";
 import "./App.css";
-import emailScreenshot from "./email.png";
-import paypalScreenshot from "./paypal.png";
-import creditcardScreenshot from "./creditcard.png";
+import orderNumberScreenshot from "./orderNumber.png";
+import redeemScreenshot from "./redeem.png";
 
 function Buy() {
-  const [purchaseOption, setPurchaseOption] = useState("");
-  const [step2Complete, setStep2Complete] = useState(false);
-  const [step3Complete, setStep3Complete] = useState(false);
-
   return (
     <div>
       <h2 style={{ textAlign: "center" }}>buy shortfuts premium</h2>
 
-      <p style={{ lineHeight: "1.4" }}>
-        <span style={{ backgroundColor: "lightyellow" }}>
-          shortfuts premium
-        </span>{" "}
-        is tied to your Google Chrome account. Use the buttons below to add
-        premium time (1 month, 3 months, or 12 months). You can add additional
-        premium time at any time!
-      </p>
-
-      {/* STEP #1 */}
-      <div style={{ marginBottom: "6px", fontWeight: "bold" }}>
-        1. Choose your payment option
-      </div>
-      <div>
-        <div>
-          <input
-            type="radio"
-            value="PayPal"
-            name="paymentOption"
-            onChange={(e) => {
-              setPurchaseOption("PayPal");
-              setStep2Complete(false);
-              setStep3Complete(false);
-            }}
-          />{" "}
-          PayPal
-        </div>
-        <div>
-          <input
-            type="radio"
-            value="Credit"
-            name="paymentOption"
-            onChange={(e) => {
-              setPurchaseOption("CreditCard");
-              setStep2Complete(false);
-              setStep3Complete(false);
-            }}
-          />{" "}
-          Credit card
-        </div>
-      </div>
-
-      {/* STEP #2 */}
-      {purchaseOption && (
-        <div style={{ marginTop: "24px" }}>
-          <div style={{ marginBottom: "6px", fontWeight: "bold" }}>
-            2. Get your shortfuts account email address
-          </div>
-          <div>
-            Open the app's pop-up and copy the email address listed next to
-            "Your account".
-            <img style={{ marginTop: "6px" }} src={emailScreenshot} />
-          </div>
-
-          {!step2Complete && (
-            <button
-              style={{ marginTop: "12px" }}
-              onClick={(e) => {
-                alert(
-                  "If you don't use this email address, your shortfuts premium will not work and you will not get refunded. So please make sure you use it!"
-                );
-
-                setStep2Complete(true);
-              }}
-            >
-              ✅ I got my shortfuts account email address!
-            </button>
-          )}
-        </div>
-      )}
-
-      {/* STEP #3 */}
-      {step2Complete && (
-        <div style={{ marginTop: "24px" }}>
-          <div style={{ marginBottom: "6px", fontWeight: "bold" }}>
-            3. Use your shortfuts account email address as your contact email
-            when you buy
-          </div>
-          {purchaseOption === "CreditCard" && (
-            <div>
-              Ensure the contact email you provide matches your shortfuts
-              account email address.
-              <img style={{ marginTop: "6px" }} src={creditcardScreenshot} />
-            </div>
-          )}
-          {purchaseOption === "PayPal" && (
-            <div>
-              <div>
-                After you log into your PayPal and click "Purchase", you'll be
-                redirected back to the store page.{" "}
-                <span style={{ backgroundColor: "chartreuse" }}>
-                  Make sure the contact email matches your shortfuts account
-                  email address.
-                </span>{" "}
-                By default, it'll be your PayPal email address. If they are not
-                the same, click the "Change" button and change it.
-              </div>
-              <img style={{ marginTop: "6px" }} src={paypalScreenshot} />
-            </div>
-          )}
-
-          {!step3Complete && (
-            <button
-              style={{ marginTop: "12px" }}
-              onClick={(e) => {
-                if (purchaseOption === "PayPal") {
-                  alert(
-                    "Seriously! If you do not ensure your contact email address matches the shortfuts account email address you got in the previous step, then your shortfuts premium will not work and you will not be refunded. Do not forget this step!"
-                  );
-                }
-
-                setStep3Complete(true);
-              }}
-            >
-              ✅ I understand!
-            </button>
-          )}
-        </div>
-      )}
-
-      {/* STEP #4 */}
-      {step3Complete && (
-        <div style={{ marginTop: "24px" }}>
-          <div style={{ marginBottom: "6px", fontWeight: "bold" }}>
-            4. Select an option and purchase shortfuts premium
-          </div>
+      <div style={{ marginTop: "36px", marginBottom: "36px" }}>
+        <div className="ting">
           <div
             style={{
               display: "flex",
-              justifyContent: "space-around",
-              marginTop: "12px",
+              flexDirection: "column",
+              width: "125px",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                width: "125px",
-                justifyContent: "center",
-                alignItems: "center",
+            <button
+              role="link"
+              onClick={() => {
+                window.open(
+                  "https://shortfuts.myshopify.com/products/copy-of-shortfuts-premium-1-month",
+                  "_blank"
+                );
               }}
+              style={{ marginRight: "40px", marginRight: "0" }}
             >
-              <button
-                role="link"
-                onClick={() => {
-                  window.open(
-                    "https://shortfuts.myshopify.com/products/copy-of-shortfuts-premium-1-month",
-                    "_blank"
-                  );
-                }}
-                style={{ marginRight: "40px", marginRight: "0" }}
-              >
-                🌟 buy 1 month
-              </button>
-              <em>$2.00/month</em>
-            </div>
+              🌟 buy 1 month
+            </button>
+            <em>$2.00/month</em>
+          </div>
 
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                width: "125px",
-                justifyContent: "center",
-                alignItems: "center",
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "125px",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <button
+              role="link"
+              onClick={() => {
+                window.open(
+                  "https://shortfuts.myshopify.com/products/copy-of-shortfuts-premium-6-months",
+                  "_blank"
+                );
               }}
+              style={{ marginRight: "40px", marginRight: "0" }}
             >
-              <button
-                role="link"
-                onClick={() => {
-                  window.open(
-                    "https://shortfuts.myshopify.com/products/copy-of-shortfuts-premium-6-months",
-                    "_blank"
-                  );
-                }}
-                style={{ marginRight: "40px", marginRight: "0" }}
-              >
-                🌟 buy 3 months
-              </button>
-              <em>$1.66/month</em>
-            </div>
+              🌟 buy 3 months
+            </button>
+            <em>$1.66/month</em>
+          </div>
 
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                width: "125px",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "black solid 1px",
-                padding: "12px",
-                backgroundColor: "lightgoldenrodyellow",
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "125px",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "black solid 1px",
+              padding: "12px",
+              backgroundColor: "lightgoldenrodyellow",
+            }}
+          >
+            <button
+              role="link"
+              onClick={() => {
+                window.open(
+                  "https://shortfuts.myshopify.com/products/shortfuts-premium-for-fifa-21",
+                  "_blank"
+                );
               }}
+              style={{ marginRight: "40px", marginRight: "0" }}
             >
-              <button
-                role="link"
-                onClick={() => {
-                  window.open(
-                    "https://shortfuts.myshopify.com/products/shortfuts-premium-for-fifa-21",
-                    "_blank"
-                  );
-                }}
-                style={{ marginRight: "40px", marginRight: "0" }}
-              >
-                🌟 buy 12 months
-              </button>
-              <em style={{ fontWeight: "bold", color: "red" }}>$1.25/month</em>
-            </div>
+              🌟 buy 12 months
+            </button>
+            <em style={{ fontWeight: "bold", color: "red" }}>$1.25/month</em>
           </div>
         </div>
-      )}
+      </div>
+
+      {/* STEP #1 */}
+      <div style={{ marginBottom: "36px", fontWeight: "bold" }}>
+        1. Decide how much time (1 month, 3 months, or 12 months) you want to
+        purchase.
+      </div>
+
+      {/* STEP #2 */}
+      <div style={{ marginBottom: "36px", fontWeight: "bold" }}>
+        2. Get your order number from the receipt sent to your email.
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <img
+            style={{ marginTop: "12px", width: "450px" }}
+            src={orderNumberScreenshot}
+          />
+        </div>
+      </div>
+
+      {/* STEP #3 */}
+      <div style={{ marginBottom: "36px", fontWeight: "bold" }}>
+        3. Enter your order number in the box and press the "redeem" button.
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <img
+            style={{ marginTop: "12px", width: "450px" }}
+            src={redeemScreenshot}
+          />
+        </div>
+      </div>
     </div>
   );
 }
