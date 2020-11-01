@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import orderNumberScreenshot from "./orderNumber.png";
 import redeemScreenshot from "./redeem.png";
+import codeScreenshot from "./code.png";
 
 function Buy() {
   return (
@@ -95,11 +96,12 @@ function Buy() {
 
       {/* STEP #2 */}
       <div style={{ marginBottom: "36px", fontWeight: "bold" }}>
-        2. Get your order number from the receipt sent to your email.
+        2. Get your code that was sent to your email (check your spam folder if
+        you don't see it).
         <div style={{ display: "flex", justifyContent: "center" }}>
           <img
             style={{ marginTop: "12px", width: "450px" }}
-            src={orderNumberScreenshot}
+            src={codeScreenshot}
           />
         </div>
       </div>
