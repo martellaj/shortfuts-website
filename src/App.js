@@ -798,6 +798,24 @@ const getContent = (
               browser and toggling it off for now.
             </u>
           </span>
+
+          <br />
+
+          <span className="question">Where can I get shortfuts x?</span>
+          <span className="answer">
+            Install shortfuts x{" "}
+            <a href="https://bit.ly/shortfuts-x" target="_blank">
+              here
+            </a>
+            .
+            <br />
+            <br />
+            <u>
+              If you do decide to take the extra precaution, make sure to
+              disable regular shortfuts by going to chrome://extensions in your
+              browser and toggling it off for now.
+            </u>
+          </span>
         </div>
       </div>
     );
