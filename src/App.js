@@ -693,6 +693,114 @@ const getContent = (
     );
   } else if (view === "discord") {
     return <Discord />;
+  } else if (view === "x") {
+    return (
+      <div>
+        <h2 style={{ textAlign: "center", marginBottom: "0" }}>shortfuts x</h2>
+        <h3 style={{ textAlign: "center", marginTop: "6px" }}>
+          <u>shortfuts</u> e<u>x</u>cept some stuff
+        </h3>
+
+        <div className="faq">
+          <span className="question">What is shortfuts x?</span>
+          <span className="answer">
+            shortfuts x is a version of shortfuts without <i>any</i> injected
+            code. In this version of the app, there's absolutely no code
+            injected into the web app's code and no UI elements injected into
+            the web app's UI. All of the code that powers this app runs
+            independently of the web app to make it safer for you to use.
+          </span>
+
+          <br />
+
+          <span className="question">Why was shortfuts x made?</span>
+          <span className="answer">
+            I developed shortfuts x because of some spicy rumors floating around
+            FUT in December 2020. There has been just enough speculation
+            surrounding some new "extension detection" to make me take action.
+            Although still mostly unverified, I have heard a couple of accounts
+            about this detection and most speculation points to checking for
+            injected code. While regular shortfuts (which will still continue to
+            be supported) has some injected code, there are very few features
+            that require it (listed later on). So this version of the app has a
+            few less features, but is ultimately incredibly safe and difficult
+            to detect.
+          </span>
+
+          <br />
+
+          <span className="question">
+            How is shortfuts x different from shortfuts?
+          </span>
+          <span className="answer">
+            There are a few features of regular shortfuts that require injected
+            code; those are the features missing from this version.
+            <ul>
+              <li>
+                The "display pricing data" shortcut is not in shortfuts x.
+              </li>
+              <li>The "show good deals" setting is not in shortfuts x.</li>
+              <li>The "list min BIN" shortcut is not in shortfuts x.</li>
+              <li>The snipe counter feature is not in shortfuts x.</li>
+              <li>
+                The tax calculator is modified in shortfuts x. Instead of my own
+                tax calculator popping in the app, this shortcut will open a new
+                page with an EA tax calculator instead.
+              </li>
+            </ul>
+          </span>
+
+          <br />
+
+          <span className="question">
+            Does shortfuts premium apply to shortfuts x?
+          </span>
+          <span className="answer">
+            Yes! So long as you have purchased premium via my store (
+            <a href="https://shortfuts.com?v=buy" target="_blank">
+              link
+            </a>
+            ), your premium status will be reflected in shortfuts x.
+            <br />
+            <br />
+            If you purchased shortfuts premium for the year via PayPal at the
+            start of FIFA 21 and are interested in using shortfuts x, simply
+            send an email to shortfuts@gmail.com with the subject of "shortfuts
+            x for annual user" and include your PayPal transaction ID. I'll sort
+            you out if you are interested in using shortfuts x.
+          </span>
+
+          <br />
+
+          <span className="question">
+            Do I recommend using shortfuts x instead of shortfuts?
+          </span>
+          <span className="answer">
+            Honestly, I don't have a good answer. There have been many claims
+            over the last few years about EA detecting shortfuts and none have
+            come to fruition. This time feels just a little different, and
+            ultimatley I do not want to be responsible for your FUT club
+            suffering which is why I made shortfuts x.
+            <br />
+            <br />
+            At time of writing this page (December 18, 2020), there's been no
+            hard evidence that EA can detect any extensions for FUT. However, if
+            you'd like to be extra cautious, switching to shortfuts x while we
+            wait for more info may not be a bad idea. At the end of the day, the
+            biggest thing missing from this version is the pricing data provided
+            by FUT Alert, which the majority of you bitch and complain about
+            anyway.
+            <br />
+            <br />
+            <u>
+              If you do decide to take the extra precaution, make sure to
+              disable regular shortfuts by going to chrome://extensions in your
+              browser and toggling it off for now.
+            </u>
+          </span>
+        </div>
+      </div>
+    );
   } else {
     // faq
     return (
