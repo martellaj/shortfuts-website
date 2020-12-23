@@ -106,6 +106,17 @@ const getContent = (
         </div>
 
         <div className="faq">
+          <span className="question">ratings filter</span>
+          <span className="answer">
+            This is an additional filter added to the search page where you can
+            specify what ratings you'd like to see in the search results. Please
+            note that it only filters per page of results; shortfuts does{" "}
+            <strong>not</strong> modify requests sent to EA's servers (because I
+            don't want you to get banned).
+          </span>
+        </div>
+
+        <div className="faq">
           <span className="question">
             FUT Alert integration (real-time prices)
           </span>
@@ -739,6 +750,7 @@ const getContent = (
               <li>
                 The "display pricing data" shortcut is not in shortfuts x.
               </li>
+              <li>The ratings filter is not in shortfuts x.</li>
               <li>The "show good deals" setting is not in shortfuts x.</li>
               <li>The "list min BIN" shortcut is not in shortfuts x.</li>
               <li>The snipe counter feature is not in shortfuts x.</li>
