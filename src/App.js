@@ -726,16 +726,12 @@ const getContent = (
 
           <span className="question">Why was shortfuts x made?</span>
           <span className="answer">
-            I developed shortfuts x because of some spicy rumors floating around
-            FUT in December 2020. There has been just enough speculation
-            surrounding some new "extension detection" to make me take action.
-            Although still mostly unverified, I have heard a couple of accounts
-            about this detection and most speculation points to checking for
-            injected code. While regular shortfuts (which will still continue to
-            be supported) has some injected code, there are very few features
-            that require it (listed later on). So this version of the app has a
-            few less features, but is ultimately incredibly safe and difficult
-            to detect.
+            I developed shortfuts x because of a new "extension detection"
+            system put place in by EA during December 2020. While regular
+            shortfuts (which will still continue to be supported) has some
+            injected code, there are very few features that require it (listed
+            later on). So this version of the app has a few less features, but
+            is ultimately incredibly safe and difficult to detect.
           </span>
 
           <br />
@@ -788,20 +784,11 @@ const getContent = (
             Do I recommend using shortfuts x instead of shortfuts?
           </span>
           <span className="answer">
-            Honestly, I don't have a good answer. There have been many claims
-            over the last few years about EA detecting shortfuts and none have
-            come to fruition. This time feels just a little different, and
-            ultimatley I do not want to be responsible for your FUT club
-            suffering which is why I made shortfuts x.
-            <br />
-            <br />
-            At time of writing this page (December 18, 2020), there's been no
-            hard evidence that EA can detect any extensions for FUT. However, if
-            you'd like to be extra cautious, switching to shortfuts x while we
-            wait for more info may not be a bad idea. At the end of the day, the
-            biggest thing missing from this version is the pricing data provided
-            by FUT Alert, which the majority of you bitch and complain about
-            anyway.
+            At time of writing this page (December 27, 2020), regular shortfuts
+            has been protected against EA's new "extension detection" system and
+            is as safe to use as ever. If you'd like to be extra cautious,
+            shortfuts x is still for you as it will always be safer (because
+            there's no injected code into the page).
             <br />
             <br />
             <u>
