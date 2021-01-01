@@ -416,8 +416,8 @@ const getContent = (
             https://chrome.google.com/webstore/detail/shortfuts-auto/licncdcgncjnmkfcbmdikknkgojihecb
           </a>
           <br />
-          Send me an email or reach out on Discord (shortfuts#6568) to get an
-          invite to the shortfuts auto Discord server!
+          DM me on Discord (shortfuts#6568) to get an invite to the shortfuts
+          auto Discord server!
         </div>
       </div>
     );
