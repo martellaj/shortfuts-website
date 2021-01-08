@@ -770,12 +770,6 @@ const getContent = (
             </a>
             ), your premium status will be reflected in shortfuts x.
             <br />
-            <br />
-            If you purchased shortfuts premium for the year via PayPal at the
-            start of FIFA 21 and are interested in using shortfuts x, simply
-            send an email to shortfuts@gmail.com with the subject of "shortfuts
-            x for annual user" and include your PayPal transaction ID. I'll sort
-            you out if you are interested in using shortfuts x.
           </span>
 
           <br />
