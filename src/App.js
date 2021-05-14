@@ -860,14 +860,23 @@ const getContent = (
             How can I unsubscribe from shortfuts premium?
           </span>
           <span className="answer">
-            If you really want to unsubscribe, simply go to your{" "}
-            <a
-              href="https://pay.google.com/payments/u/home#subscriptionsAndServices"
-              target="_blank"
-            >
-              Google Pay subscriptions
-            </a>{" "}
-            page to manage your subscription.
+            If you want to cancel your shortfuts premium subscription, follow
+            these easy steps.
+            <ol>
+              <li>
+                Search your email for "Your shortfuts premium subscription" to
+                find the email that was sent to you when your subscription was
+                created.
+              </li>
+              <li>
+                Click the "Manage Subscriptions" button in the email to open
+                your subscription management page.
+              </li>
+              <li>
+                Select the subscription you want to cancel, click "See more
+                details", and then click "Cancel Subscription".
+              </li>
+            </ol>
           </span>
         </div>
       </div>
