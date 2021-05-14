@@ -9,7 +9,7 @@ function Buy() {
     <div>
       <h2 style={{ textAlign: "center" }}>buy shortfuts premium</h2>
 
-      <div style={{ marginTop: "36px", marginBottom: "36px" }}>
+      {/* <div style={{ marginTop: "36px", marginBottom: "36px" }}>
         <div className="ting">
           <div
             style={{
@@ -86,12 +86,15 @@ function Buy() {
             <em style={{ fontWeight: "bold", color: "red" }}>$1.25/month</em>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* STEP #1 */}
       <div style={{ marginBottom: "36px", fontWeight: "bold" }}>
-        1. Decide how much time (1 month, 3 months, or 12 months) you want to
-        purchase.
+        1. Decide option is best for you:{" "}
+        <a href="https://shortfuts.myshopify.com" target="_blank">
+          1 month of premium, 12 months of premium, or a monthly subscription to
+          premium
+        </a>
       </div>
 
       {/* STEP #2 */}
