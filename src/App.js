@@ -4,6 +4,11 @@ import { loadStripe } from "@stripe/stripe-js";
 import emailScreenshot from "./email.png";
 import Buy from "./Buy";
 import Discord from "./Discord";
+import unsubscribe1 from "./cancelSubscriptionImages/1.png";
+import unsubscribe2 from "./cancelSubscriptionImages/2.png";
+import unsubscribe3 from "./cancelSubscriptionImages/3.png";
+import unsubscribe4 from "./cancelSubscriptionImages/4.png";
+import unsubscribe5 from "./cancelSubscriptionImages/5.png";
 
 // test
 // const stripePromise = loadStripe("pk_test_CzSGkLAPEdl9VcVmDNKvGd8Q00x4IyVhbt");
@@ -864,17 +869,45 @@ const getContent = (
             these easy steps.
             <ol>
               <li>
-                Search your email for "Your shortfuts premium subscription" to
-                find the email that was sent to you when your subscription was
-                created.
+                Create an account from my store page (
+                <a href="https://shortfuts.myshopify.com/" target="_blank">
+                  https://shortfuts.myshopify.com
+                </a>
+                ).
+                <img
+                  style={{ width: "600px", marginBottom: "12px" }}
+                  src={unsubscribe1}
+                />
               </li>
               <li>
-                Click the "Manage Subscriptions" button in the email to open
-                your subscription management page.
+                Click the "Create account" button to create an account.
+                <img
+                  style={{ width: "600px", marginBottom: "12px" }}
+                  src={unsubscribe2}
+                />
               </li>
               <li>
-                Select the subscription you want to cancel, click "See more
-                details", and then click "Cancel Subscription".
+                Go to your account page and then click the "MANAGE SUBSCRIPTION"
+                button.
+                <img
+                  style={{ width: "600px", marginBottom: "12px" }}
+                  src={unsubscribe3}
+                />
+              </li>
+              <li>
+                Click the "See more details" button to manage a specific
+                subscription.
+                <img
+                  style={{ width: "600px", marginBottom: "12px" }}
+                  src={unsubscribe4}
+                />
+              </li>
+              <li>
+                Click "Cancel Subscription" to cancel the subscription.
+                <img
+                  style={{ width: "600px", marginBottom: "12px" }}
+                  src={unsubscribe5}
+                />
               </li>
             </ol>
           </span>
