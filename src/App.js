@@ -817,6 +817,39 @@ const getContent = (
         </div>
       </div>
     );
+  } else if (view === "new-premium") {
+    return (
+      <div>
+        <h2 style={{ textAlign: "center", marginBottom: "0" }}>
+          shortfuts premium in FIFA 22
+        </h2>
+        <p>
+          Thank you so much for your support in FIFA 21! Last year, you
+          purchased premium for FIFA 21 by sending me money via PayPal and me
+          adding you to an explicit list of premium users. I'm happy to tell you
+          that since then, I've been able to improve the premium purchasing
+          experience.
+        </p>
+        <strong>
+          If you're interested in continuing to support me and buy shortfuts
+          premium for FIFA 22, you can do by first installing shortfuts from the
+          Chrome Web Store (
+          <a href="https://bit.ly/shortfuts-app" target="_blank">
+            here
+          </a>
+          ) and then heading over to my store and purchasing a shortfuts premium
+          code (
+          <a href="https://shortfuts.com/?v=buy" target="_blank">
+            instructions here
+          </a>
+          ).
+        </strong>
+        <p>
+          Whether or you continue to support or not, I appreciate your support
+          so far and wish you a succesful FIFA 22 cycle!
+        </p>
+      </div>
+    );
   } else {
     // faq
     return (
