@@ -850,6 +850,41 @@ const getContent = (
         </p>
       </div>
     );
+  } else if (view === "sideload") {
+    return (
+      <div>
+        <h2>shortfuts download</h2>
+        <p>
+          shortfuts requires an update and the Chrome Web Store is taking too
+          long to publish it. While we wait, you can download the patched
+          version below.{" "}
+        </p>
+
+        <strong style={{ backgroundColor: "gold" }}>
+          It is recommended to switch back to the official version (from{" "}
+          <a href="http://bit.ly/shortfuts-app" target="_blank">
+            http://bit.ly/shortfuts-app
+          </a>
+          ) as soon as the patched version is available in the Chrome Web Store
+          (will be announced in the Discord server).
+        </strong>
+
+        <p>
+          Included in the ZIP file is a README.txt file which has instructions
+          on how to sideload the app in to Google Chrome.
+        </p>
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <button
+            onClick={() =>
+              window.open("https://shortfuts.com/shortfuts%20v13.0.0.zip")
+            }
+          >
+            download shortfuts
+          </button>
+        </div>
+      </div>
+    );
   } else {
     // faq
     return (
