@@ -852,12 +852,32 @@ const getContent = (
     );
   } else if (view === "sideload") {
     return (
-      <div>
-        <h2>shortfuts download</h2>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <h2>sideload shortfuts</h2>
         <p>
           shortfuts requires an update and the Chrome Web Store is taking too
           long to publish it. While we wait, you can download the patched
           version below.{" "}
+        </p>
+
+        <p>
+          This is <strong>temporary</strong>, as it isn't the official version
+          and thus won't get updates in the future. Because it's{" "}
+          <strong>temporary</strong>, it will only work until September 25 (that
+          should be plenty of time for Google to publish it officially).
+        </p>
+
+        <p>
+          When it's expired or when you get an announcement from me that the
+          official version has been published, you should go delete this version
+          of the app from chrome://extensions and re-enable the official one
+          immediately.
         </p>
 
         <strong style={{ backgroundColor: "gold" }}>
