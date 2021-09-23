@@ -877,7 +877,7 @@ const getContent = (
         <div style={{ display: "flex", justifyContent: "center" }}>
           <button
             onClick={() =>
-              window.open("https://shortfuts.com/shortfuts%20v13.0.0.zip")
+              window.open("https://shortfuts.com/shortfuts%20v13.0.1.zip")
             }
           >
             download shortfuts
