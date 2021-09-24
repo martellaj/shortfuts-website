@@ -861,6 +861,27 @@ const getContent = (
       >
         <h2>sideload shortfuts</h2>
         <p>
+          Please install shortfuts from the Chrome Web Store. There are no
+          essential updates that are currently pending release.
+        </p>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <button onClick={() => window.open("https://bit.ly/shortfuts-app")}>
+            download shortfuts
+          </button>
+        </div>
+      </div>
+    );
+  } else if (view === "sideload") {
+    return (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <h2>sideload shortfuts</h2>
+        <p>
           shortfuts requires an update and the Chrome Web Store is taking too
           long to publish it. While we wait, you can download the patched
           version below.{" "}
