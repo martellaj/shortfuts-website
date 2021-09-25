@@ -869,8 +869,7 @@ const getContent = (
         <p>
           This is <strong>temporary</strong>, as it isn't the official version
           and thus won't get updates in the future. Because it's{" "}
-          <strong>temporary</strong>, it will only work until September 25 (that
-          should be plenty of time for Google to publish it officially).
+          <strong>temporary</strong>, it will only work for a few days.
         </p>
 
         <p>
