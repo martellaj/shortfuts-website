@@ -3,6 +3,7 @@ import "./App.css";
 import { loadStripe } from "@stripe/stripe-js";
 import emailScreenshot from "./email.png";
 import Buy from "./Buy";
+import Code from "./Code";
 import Discord from "./Discord";
 import unsubscribe1 from "./cancelSubscriptionImages/1.png";
 import unsubscribe2 from "./cancelSubscriptionImages/2.png";
@@ -850,6 +851,8 @@ const getContent = (
         </p>
       </div>
     );
+  } else if (view === "code") {
+    return <Code />;
   } else if (view === "sideload") {
     return (
       <div
