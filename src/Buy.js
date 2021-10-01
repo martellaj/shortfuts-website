@@ -92,8 +92,7 @@ function Buy() {
       <div style={{ marginBottom: "36px", fontWeight: "bold" }}>
         1. Decide option is best for you:{" "}
         <a href="https://shortfuts.myshopify.com" target="_blank">
-          1 month of premium, 12 months of premium, or a monthly subscription to
-          premium
+          1 month of premium or 12 months of premium (best value)
         </a>
       </div>
 
