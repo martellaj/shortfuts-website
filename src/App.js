@@ -905,6 +905,33 @@ const getContent = (
         </div>
       </div>
     );
+  } else if (view === "beta") {
+    return (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <h2>shortfuts auto beta</h2>
+        <p>
+          Thanks for beta testing shortfuts auto! Please report any issues in
+          the #beta-users channel in the Discord server!
+        </p>
+
+        <p>
+          Included in the ZIP file is a README.txt file which has instructions
+          on how to sideload the app in to Google Chrome.
+        </p>
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <button onClick={() => window.open("https://shortfuts.com/auto.zip")}>
+            download shortfuts auto beta
+          </button>
+        </div>
+      </div>
+    );
   } else {
     // faq
     return (
