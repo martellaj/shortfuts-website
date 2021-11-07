@@ -131,7 +131,7 @@ export default function Code() {
                 special role that'll give you access to news, updates, and new
                 versions sooner:{" "}
                 <span style={{ fontWeight: "bold" }}>
-                  !claim {code} {email}
+                  !claim {orderNumber} {email}
                 </span>
               </li>
             </ol>
