@@ -853,6 +853,8 @@ const getContent = (
     );
   } else if (view === "code") {
     return <Code />;
+  } else if (view === "redeem") {
+    return <Code />;
   } else if (view === "sideload") {
     return (
       <div
