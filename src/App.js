@@ -976,59 +976,6 @@ const getContent = (
             .
           </span>
         </div>
-
-        <div className="faq">
-          <span className="question">
-            How can I unsubscribe from shortfuts premium?
-          </span>
-          <span className="answer">
-            If you want to cancel your shortfuts premium subscription, follow
-            these easy steps.
-            <ol>
-              <li>
-                Create an account from my store page (
-                <a href="https://shortfuts.myshopify.com/" target="_blank">
-                  https://shortfuts.myshopify.com
-                </a>
-                ).
-                <img
-                  style={{ width: "600px", marginBottom: "12px" }}
-                  src={unsubscribe1}
-                />
-              </li>
-              <li>
-                Click the "Create account" button to create an account.
-                <img
-                  style={{ width: "600px", marginBottom: "12px" }}
-                  src={unsubscribe2}
-                />
-              </li>
-              <li>
-                Go to your account page and then click the "MANAGE SUBSCRIPTION"
-                button.
-                <img
-                  style={{ width: "600px", marginBottom: "12px" }}
-                  src={unsubscribe3}
-                />
-              </li>
-              <li>
-                Click the "See more details" button to manage a specific
-                subscription.
-                <img
-                  style={{ width: "600px", marginBottom: "12px" }}
-                  src={unsubscribe4}
-                />
-              </li>
-              <li>
-                Click "Cancel Subscription" to cancel the subscription.
-                <img
-                  style={{ width: "600px", marginBottom: "12px" }}
-                  src={unsubscribe5}
-                />
-              </li>
-            </ol>
-          </span>
-        </div>
       </div>
     );
   }
