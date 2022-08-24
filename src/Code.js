@@ -101,25 +101,6 @@ export default function Code() {
           <div>
             <ol>
               <li>
-                Install shortfuts auto{" "}
-                <a
-                  href="https://chrome.google.com/webstore/detail/shortfuts-auto/ejhpmpgfaoiecijmggjldlmjligknbnb"
-                  target="_blank"
-                >
-                  from the Chrome Web Store
-                </a>
-              </li>
-              <li>
-                Redeem your code:{" "}
-                <span style={{ fontWeight: "bold" }}>{code}</span>
-              </li>
-              <li>
-                Watch{" "}
-                <a href="https://youtu.be/DF4acQeJ54Y" target="_blank">
-                  the tutorial on YouTube
-                </a>
-              </li>
-              <li>
                 Join the Discord (
                 <a href="https://bit.ly/sf-discord" target="_blank">
                   here's an invite
@@ -128,11 +109,23 @@ export default function Code() {
               </li>
               <li>
                 DM the following to M'Boopi (M'Boopi the Mod#2892) to claim your
-                special role that'll give you access to news, updates, and new
-                versions sooner:{" "}
+                special role that'll unlock the{" "}
+                <span style={{ fontWeight: "bold" }}>🔥auto-install</span>{" "}
+                channel where you can get the latest and greatest version of
+                shortfuts auto:{" "}
                 <span style={{ fontWeight: "bold" }}>
                   !claim {orderNumber} {email}
                 </span>
+              </li>
+              <li>
+                Redeem your code in the app:{" "}
+                <span style={{ fontWeight: "bold" }}>{code}</span>
+              </li>
+              <li>
+                Watch{" "}
+                <a href="https://youtu.be/DF4acQeJ54Y" target="_blank">
+                  the tutorial on YouTube
+                </a>
               </li>
             </ol>
           </div>
