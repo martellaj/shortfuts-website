@@ -100,8 +100,15 @@ export default function Code() {
         {!error && code && isAutobuyerOrder && (
           <div>
             <strong style={{ textAlign: "center" }}>
-              Watch <a href="">this video</a> for step-by-step instructions on
-              how to install shortfuts auto and redeem your access.
+              Watch{" "}
+              <a
+                href="https://www.youtube.com/watch?v=KsiRZ-SNPQU"
+                target="_blank"
+              >
+                this video
+              </a>{" "}
+              for step-by-step instructions on how to install shortfuts auto and
+              redeem your access.
             </strong>
             <ol>
               <li>
