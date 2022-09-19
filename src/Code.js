@@ -99,6 +99,10 @@ export default function Code() {
 
         {!error && code && isAutobuyerOrder && (
           <div>
+            <strong style={{ textAlign: "center" }}>
+              Watch <a href="">this video</a> for step-by-step instructions on
+              how to install shortfuts auto and redeem your access.
+            </strong>
             <ol>
               <li>
                 Join the Discord (
@@ -115,7 +119,9 @@ export default function Code() {
                 shortfuts auto:{" "}
                 <span style={{ fontWeight: "bold" }}>
                   !claim {orderNumber} {email}
-                </span>
+                </span>{" "}
+                (this is unnecessary if you've already claimed your role in FIFA
+                22)
               </li>
               <li>
                 Redeem your code in the app:{" "}
