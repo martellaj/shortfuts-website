@@ -61,18 +61,6 @@ const tiers = [
     buttonText: "buy now",
     buttonVariant: "contained",
   },
-  //   {
-  //     title: "Enterprise",
-  //     price: "30",
-  //     description: [
-  //       "50 users included",
-  //       "30 GB of storage",
-  //       "Help center access",
-  //       "Phone & email support",
-  //     ],
-  //     buttonText: "Contact us",
-  //     buttonVariant: "outlined",
-  //   },
 ];
 
 const footers = [
@@ -173,6 +161,7 @@ function PricingContent() {
       {/* End hero unit */}
       <Container maxWidth="md" component="main">
         <Grid container spacing={5} alignItems="flex-end">
+          {console.log(tiers.length)}
           {tiers.map((tier) => {
             return (
               // Enterprise card is full width at sm breakpoint
