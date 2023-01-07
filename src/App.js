@@ -10,6 +10,7 @@ import unsubscribe2 from "./cancelSubscriptionImages/2.png";
 import unsubscribe3 from "./cancelSubscriptionImages/3.png";
 import unsubscribe4 from "./cancelSubscriptionImages/4.png";
 import unsubscribe5 from "./cancelSubscriptionImages/5.png";
+import TemplateBaby from "./homepage/TemplateBaby";
 
 // test
 // const stripePromise = loadStripe("pk_test_CzSGkLAPEdl9VcVmDNKvGd8Q00x4IyVhbt");
@@ -18,7 +19,7 @@ import unsubscribe5 from "./cancelSubscriptionImages/5.png";
 const stripePromise = loadStripe("pk_live_Dd6tmAPDrcaK7m20TDG1OhjI00MZibIg97");
 
 function App() {
-  const [view, setView] = useState("");
+  const [view, setView] = useState("faq");
 
   const [option1, setOption1] = useState(false);
   const [option2, setOption2] = useState(false);
@@ -36,7 +37,9 @@ function App() {
     }
   }, []);
 
-  return (
+  return view === "faq" ? (
+    <TemplateBaby />
+  ) : (
     <div className="App">
       {getContent(
         view,
@@ -935,49 +938,7 @@ const getContent = (
       </div>
     );
   } else {
-    // faq
-    return (
-      <div>
-        <h2>shortfuts faq</h2>
-
-        <div className="faq">
-          <span className="question">What is shortfuts?</span>
-          <span className="answer">
-            shortfuts is a Chrome extension that augments the FUT web app.
-            Primarily, the extension allows you to assign keyboard shortcuts to
-            common actions that you do in the web app to make you faster.
-          </span>
-        </div>
-
-        <div className="faq">
-          <span className="question">Can I get banned using shortfuts?</span>
-          <span className="answer">
-            Yes. All third party extensions are against EA's ToS. However,
-            thousands of people have used shortfuts since FIFA 18 and permanent
-            account bans are extremely rare. If you are using shortfuts and
-            shortfuts only, your risk of ban is extremely low. The worst
-            punishment people generally face is a temporary market ban for a few
-            hours (which happens often when using the web app even if you're not
-            using shortfuts).
-          </span>
-        </div>
-
-        <div className="faq">
-          <span className="question">
-            How come by shortcuts aren't working?
-          </span>
-          <span className="answer">
-            If your shortcuts aren't working, please try clearing your cache and
-            fully restarting Google Chrome. If your problem persists, please
-            post in the{" "}
-            <a href="https://discord.gg/UDAUHsf" target="_blank">
-              #shortfuts-questions channel in my Discord server
-            </a>
-            .
-          </span>
-        </div>
-      </div>
-    );
+    return <TemplateBaby />;
   }
 };
 

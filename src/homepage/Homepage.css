@@ -1,0 +1,27 @@
+.homepageContainer {
+  align-items: center;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.navigationHeaderContainer {
+  align-items: center;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.heroBannerOuter {
+  display: flex;
+}
+
+.item {
+  max-width: 100% !important;
+  flex-grow: 1 !important;
+}
