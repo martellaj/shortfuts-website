@@ -34,6 +34,34 @@ function Copyright(props) {
   );
 }
 
+const a = {
+  title: "keyboard shortfuts",
+  price: "3.50",
+  description: [
+    "add keyboard shortcuts to common actions",
+    "highlight good deals using FUT Alert data",
+    "snipe faster with your fingers",
+    "save and load your favorite sniping filters",
+  ],
+  buttonText: "buy 1 month",
+  buttonVariant: "outlined",
+};
+
+const b = {
+  title: "shortfuts auto",
+  subheader: "fastest auto sniper",
+  price: "35",
+  description: [
+    "snipe without lifting a finger",
+    "human like behavior to prevent bans",
+    "automatically list or store cards you win",
+    "get notified via Discord as things happen",
+    "minimal bidding support (more to come!)",
+  ],
+  buttonText: "buy now",
+  buttonVariant: "contained",
+};
+
 const tiers = [
   {
     title: "keyboard shortfuts",
@@ -161,108 +189,189 @@ function PricingContent() {
       {/* End hero unit */}
       <Container maxWidth="md" component="main">
         <Grid container spacing={5} alignItems="flex-end">
-          {console.log(tiers.length)}
-          {tiers.map((tier) => {
-            return (
-              // Enterprise card is full width at sm breakpoint
-              <Grid
-                item
-                key={tier.title}
-                xs={12}
-                sm={tier.title === "Enterprise" ? 12 : 6}
-                md={4}
-                className="item"
-              >
-                <Card>
-                  <CardHeader
-                    title={tier.title}
-                    subheader={tier.subheader}
-                    titleTypographyProps={{ align: "center" }}
-                    action={
-                      tier.title === "shortfuts auto" ? <StarIcon /> : null
+          {/* ///////////////////////// */}
+          {/* /// keyboard shortfuts ///*/}
+          {/* ///////////////////////// */}
+          <Grid
+            item
+            key={a.title}
+            xs={12}
+            sm={a.title === "Enterprise" ? 12 : 6}
+            md={4}
+            className="item"
+          >
+            <Card>
+              <CardHeader
+                title={a.title}
+                subheader={a.subheader}
+                titleTypographyProps={{ align: "center" }}
+                action={a.title === "shortfuts auto" ? <StarIcon /> : null}
+                subheaderTypographyProps={{
+                  align: "center",
+                  sx: {
+                    color: (theme) =>
+                      a.title === "shortfuts auto"
+                        ? theme.palette.primary.contrastText
+                        : theme.palette.getContrastText(
+                            theme.palette.grey[200]
+                          ),
+                  },
+                }}
+                sx={{
+                  backgroundColor: (theme) =>
+                    a.title === "shortfuts auto"
+                      ? theme.palette.primary.main
+                      : theme.palette.grey[200],
+                  color: (theme) =>
+                    a.title === "shortfuts auto"
+                      ? theme.palette.primary.contrastText
+                      : theme.palette.getContrastText(theme.palette.grey[200]),
+                }}
+              />
+              <CardContent>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "baseline",
+                    mb: 2,
+                  }}
+                >
+                  <Typography component="h2" variant="h3" color="text.primary">
+                    ${a.price}
+                  </Typography>
+                  <Typography variant="h6" color="text.secondary">
+                    {a.title === "keyboard shortfuts" ? "/mo" : ""}
+                  </Typography>
+                </Box>
+                <ul>
+                  {a.description.map((line) => (
+                    <Typography
+                      component="li"
+                      variant="subtitle1"
+                      align="center"
+                      key={line}
+                    >
+                      &#x2022; {line}
+                    </Typography>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardActions>
+                <Button
+                  fullWidth
+                  variant={a.buttonVariant}
+                  onClick={() => {
+                    if (a.title === "shortfuts auto") {
+                      window.open(
+                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-fifa-23",
+                        "_blank"
+                      );
+                    } else if (a.title === "keyboard shortfuts") {
+                      window.open(
+                        "https://shortfuts.myshopify.com/collections/frontpage/products/copy-of-shortfuts-premium-1-month",
+                        "_blank"
+                      );
                     }
-                    subheaderTypographyProps={{
-                      align: "center",
-                      sx: {
-                        color: (theme) =>
-                          tier.title === "shortfuts auto"
-                            ? theme.palette.primary.contrastText
-                            : theme.palette.getContrastText(
-                                theme.palette.grey[200]
-                              ),
-                      },
-                    }}
-                    sx={{
-                      backgroundColor: (theme) =>
-                        tier.title === "shortfuts auto"
-                          ? theme.palette.primary.main
-                          : theme.palette.grey[200],
-                      color: (theme) =>
-                        tier.title === "shortfuts auto"
-                          ? theme.palette.primary.contrastText
-                          : theme.palette.getContrastText(
-                              theme.palette.grey[200]
-                            ),
-                    }}
-                  />
-                  <CardContent>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "baseline",
-                        mb: 2,
-                      }}
+                  }}
+                >
+                  {a.buttonText}
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+
+          {/* ///////////////////////// */}
+          {/* /// shortfuts auto ///*/}
+          {/* ///////////////////////// */}
+          <Grid
+            item
+            key={b.title}
+            xs={12}
+            sm={b.title === "Enterprise" ? 12 : 6}
+            md={4}
+            className="item"
+          >
+            <Card>
+              <CardHeader
+                title={b.title}
+                subheader={b.subheader}
+                titleTypographyProps={{ align: "center" }}
+                action={b.title === "shortfuts auto" ? <StarIcon /> : null}
+                subheaderTypographyProps={{
+                  align: "center",
+                  sx: {
+                    color: (theme) =>
+                      b.title === "shortfuts auto"
+                        ? theme.palette.primary.contrastText
+                        : theme.palette.getContrastText(
+                            theme.palette.grey[200]
+                          ),
+                  },
+                }}
+                sx={{
+                  backgroundColor: (theme) =>
+                    b.title === "shortfuts auto"
+                      ? theme.palette.primary.main
+                      : theme.palette.grey[200],
+                  color: (theme) =>
+                    b.title === "shortfuts auto"
+                      ? theme.palette.primary.contrastText
+                      : theme.palette.getContrastText(theme.palette.grey[200]),
+                }}
+              />
+              <CardContent>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "baseline",
+                    mb: 2,
+                  }}
+                >
+                  <Typography component="h2" variant="h3" color="text.primary">
+                    ${b.price}
+                  </Typography>
+                  <Typography variant="h6" color="text.secondary">
+                    {b.title === "keyboard shortfuts" ? "/mo" : ""}
+                  </Typography>
+                </Box>
+                <ul>
+                  {b.description.map((line) => (
+                    <Typography
+                      component="li"
+                      variant="subtitle1"
+                      align="center"
+                      key={line}
                     >
-                      <Typography
-                        component="h2"
-                        variant="h3"
-                        color="text.primary"
-                      >
-                        ${tier.price}
-                      </Typography>
-                      <Typography variant="h6" color="text.secondary">
-                        {tier.title === "keyboard shortfuts" ? "/mo" : ""}
-                      </Typography>
-                    </Box>
-                    <ul>
-                      {tier.description.map((line) => (
-                        <Typography
-                          component="li"
-                          variant="subtitle1"
-                          align="center"
-                          key={line}
-                        >
-                          &#x2022; {line}
-                        </Typography>
-                      ))}
-                    </ul>
-                  </CardContent>
-                  <CardActions>
-                    <Button
-                      fullWidth
-                      variant={tier.buttonVariant}
-                      onClick={() => {
-                        if (tier.title === "shortfuts auto") {
-                          window.open(
-                            "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-fifa-23",
-                            "_blank"
-                          );
-                        } else if (tier.title === "keyboard shortfuts") {
-                          window.open(
-                            "https://shortfuts.myshopify.com/collections/frontpage/products/copy-of-shortfuts-premium-1-month",
-                            "_blank"
-                          );
-                        }
-                      }}
-                    >
-                      {tier.buttonText}
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            );
-          })}
+                      &#x2022; {line}
+                    </Typography>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardActions>
+                <Button
+                  fullWidth
+                  variant={b.buttonVariant}
+                  onClick={() => {
+                    if (b.title === "shortfuts auto") {
+                      window.open(
+                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-fifa-23",
+                        "_blank"
+                      );
+                    } else if (b.title === "keyboard shortfuts") {
+                      window.open(
+                        "https://shortfuts.myshopify.com/collections/frontpage/products/copy-of-shortfuts-premium-1-month",
+                        "_blank"
+                      );
+                    }
+                  }}
+                >
+                  {b.buttonText}
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
         </Grid>
       </Container>
       {/* Footer */}
