@@ -182,105 +182,14 @@ function PricingContent() {
           color="text.secondary"
           component="p"
         >
-          We've been providing FUT players with the fastest, most reliable, and
-          most valuable bots and tools since FIFA 18! Get involved now!
+          We've been providing FIFA Ultimate Team (FUT) players with the
+          fastest, most reliable, and most valuable bots and tools for the FUT
+          web app since FIFA 18! Get involved now!
         </Typography>
       </Container>
       {/* End hero unit */}
       <Container maxWidth="md" component="main">
         <Grid container spacing={5} alignItems="flex-end">
-          {/* ///////////////////////// */}
-          {/* /// keyboard shortfuts ///*/}
-          {/* ///////////////////////// */}
-          <Grid
-            item
-            key={a.title}
-            xs={12}
-            sm={a.title === "Enterprise" ? 12 : 6}
-            md={4}
-            className="item"
-          >
-            <Card>
-              <CardHeader
-                title={a.title}
-                subheader={a.subheader}
-                titleTypographyProps={{ align: "center" }}
-                action={a.title === "shortfuts auto" ? <StarIcon /> : null}
-                subheaderTypographyProps={{
-                  align: "center",
-                  sx: {
-                    color: (theme) =>
-                      a.title === "shortfuts auto"
-                        ? theme.palette.primary.contrastText
-                        : theme.palette.getContrastText(
-                            theme.palette.grey[200]
-                          ),
-                  },
-                }}
-                sx={{
-                  backgroundColor: (theme) =>
-                    a.title === "shortfuts auto"
-                      ? theme.palette.primary.main
-                      : theme.palette.grey[200],
-                  color: (theme) =>
-                    a.title === "shortfuts auto"
-                      ? theme.palette.primary.contrastText
-                      : theme.palette.getContrastText(theme.palette.grey[200]),
-                }}
-              />
-              <CardContent>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "baseline",
-                    mb: 2,
-                  }}
-                >
-                  <Typography component="h2" variant="h3" color="text.primary">
-                    ${a.price}
-                  </Typography>
-                  <Typography variant="h6" color="text.secondary">
-                    {a.title === "keyboard shortfuts" ? "/mo" : ""}
-                  </Typography>
-                </Box>
-                <ul>
-                  {a.description.map((line) => (
-                    <Typography
-                      component="li"
-                      variant="subtitle1"
-                      align="center"
-                      key={line}
-                    >
-                      &#x2022; {line}
-                    </Typography>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardActions>
-                <Button
-                  fullWidth
-                  variant={a.buttonVariant}
-                  onClick={() => {
-                    if (a.title === "shortfuts auto") {
-                      window.open(
-                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-fifa-23",
-                        "_blank"
-                      );
-                    } else if (a.title === "keyboard shortfuts") {
-                      window.open(
-                        "https://shortfuts.myshopify.com/collections/frontpage/products/copy-of-shortfuts-premium-1-month",
-                        "_blank"
-                      );
-                    }
-                  }}
-                >
-                  {a.buttonText}
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-
           {/* ///////////////////////// */}
           {/* /// shortfuts auto ///*/}
           {/* ///////////////////////// */}
@@ -368,6 +277,98 @@ function PricingContent() {
                   }}
                 >
                   {b.buttonText}
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+
+          {/* ///////////////////////// */}
+          {/* /// keyboard shortfuts ///*/}
+          {/* ///////////////////////// */}
+          <Grid
+            item
+            key={a.title}
+            xs={12}
+            sm={a.title === "Enterprise" ? 12 : 6}
+            md={4}
+            className="item"
+          >
+            <Card>
+              <CardHeader
+                title={a.title}
+                subheader={a.subheader}
+                titleTypographyProps={{ align: "center" }}
+                action={a.title === "shortfuts auto" ? <StarIcon /> : null}
+                subheaderTypographyProps={{
+                  align: "center",
+                  sx: {
+                    color: (theme) =>
+                      a.title === "shortfuts auto"
+                        ? theme.palette.primary.contrastText
+                        : theme.palette.getContrastText(
+                            theme.palette.grey[200]
+                          ),
+                  },
+                }}
+                sx={{
+                  backgroundColor: (theme) =>
+                    a.title === "shortfuts auto"
+                      ? theme.palette.primary.main
+                      : theme.palette.grey[200],
+                  color: (theme) =>
+                    a.title === "shortfuts auto"
+                      ? theme.palette.primary.contrastText
+                      : theme.palette.getContrastText(theme.palette.grey[200]),
+                }}
+              />
+              <CardContent>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "baseline",
+                    mb: 2,
+                  }}
+                >
+                  <Typography component="h2" variant="h3" color="text.primary">
+                    ${a.price}
+                  </Typography>
+                  <Typography variant="h6" color="text.secondary">
+                    {a.title === "keyboard shortfuts" ? "/mo" : ""}
+                  </Typography>
+                </Box>
+                <ul>
+                  {a.description.map((line) => (
+                    <Typography
+                      component="li"
+                      variant="subtitle1"
+                      align="center"
+                      key={line}
+                    >
+                      &#x2022; {line}
+                    </Typography>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardActions>
+                <Button
+                  fullWidth
+                  variant={a.buttonVariant}
+                  onClick={() => {
+                    if (a.title === "shortfuts auto") {
+                      window.open(
+                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-fifa-23",
+                        "_blank"
+                      );
+                    } else if (a.title === "keyboard shortfuts") {
+                      window.open(
+                        "https://shortfuts.myshopify.com/collections/frontpage/products/copy-of-shortfuts-premium-1-month",
+                        "_blank"
+                      );
+                    }
+                  }}
+                >
+                  {a.buttonText}
                 </Button>
               </CardActions>
             </Card>
