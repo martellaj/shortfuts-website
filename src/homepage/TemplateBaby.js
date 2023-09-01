@@ -50,13 +50,13 @@ const a = {
 const b = {
   title: "shortfuts auto",
   subheader: "fastest auto sniper",
-  price: "35",
+  price: "50",
   description: [
     "snipe without lifting a finger",
     "human like behavior to prevent bans",
     "automatically list or store cards you win",
     "get notified via Discord as things happen",
-    "minimal bidding support (more to come!)",
+    "intelligent auto bidder",
   ],
   buttonText: "buy now",
   buttonVariant: "contained",
@@ -78,7 +78,7 @@ const tiers = [
   {
     title: "shortfuts auto",
     subheader: "fastest auto sniper",
-    price: "35",
+    price: "50",
     description: [
       "snipe without lifting a finger",
       "human like behavior to prevent bans",
