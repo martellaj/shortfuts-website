@@ -127,8 +127,8 @@ export default function Code() {
                 <span style={{ fontWeight: "bold" }}>
                   !claim {orderNumber} {email}
                 </span>{" "}
-                (this is unnecessary if you've already claimed your role in FIFA
-                22)
+                (this is unnecessary if you've already claimed your role in a
+                previous game)
               </li>
               <li>
                 Redeem your code in the app:{" "}
