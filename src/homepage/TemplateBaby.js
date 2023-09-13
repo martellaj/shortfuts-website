@@ -229,7 +229,13 @@ function PricingContent() {
                       : theme.palette.getContrastText(theme.palette.grey[200]),
                 }}
               />
-              <CardContent>
+              <CardContent
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
                 <Box
                   sx={{
                     display: "flex",
@@ -257,6 +263,19 @@ function PricingContent() {
                     </Typography>
                   ))}
                 </ul>
+                <a
+                  href="https://shortfuts.myshopify.com/pages/shortfuts-auto-info"
+                  target="_blank"
+                  style={{
+                    fontVariant: "small-caps",
+                    marginTop: "10px",
+                    backgroundColor: "#9dceff",
+                    padding: "10px",
+                    borderRadius: "4px",
+                  }}
+                >
+                  FULL FEATURE LIST
+                </a>
               </CardContent>
               <CardActions>
                 <Button
@@ -265,7 +284,7 @@ function PricingContent() {
                   onClick={() => {
                     if (b.title === "shortfuts auto") {
                       window.open(
-                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-fifa-23",
+                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-ea-sports-fc-24",
                         "_blank"
                       );
                     } else if (b.title === "keyboard shortfuts") {
@@ -321,7 +340,13 @@ function PricingContent() {
                       : theme.palette.getContrastText(theme.palette.grey[200]),
                 }}
               />
-              <CardContent>
+              <CardContent
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
                 <Box
                   sx={{
                     display: "flex",
@@ -349,6 +374,19 @@ function PricingContent() {
                     </Typography>
                   ))}
                 </ul>
+                <a
+                  href="https://shortfuts.myshopify.com/pages/shortfuts-info"
+                  target="_blank"
+                  style={{
+                    fontVariant: "small-caps",
+                    marginTop: "10px",
+                    backgroundColor: "#eeeeee",
+                    padding: "10px",
+                    borderRadius: "4px",
+                  }}
+                >
+                  FULL FEATURE LIST
+                </a>
               </CardContent>
               <CardActions>
                 <Button
