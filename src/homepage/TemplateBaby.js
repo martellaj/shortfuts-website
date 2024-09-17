@@ -284,7 +284,7 @@ function PricingContent() {
                   onClick={() => {
                     if (b.title === "shortfuts auto") {
                       window.open(
-                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-ea-sports-fc-24",
+                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-eafc-25",
                         "_blank"
                       );
                     } else if (b.title === "keyboard shortfuts") {
