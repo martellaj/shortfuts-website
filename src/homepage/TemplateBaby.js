@@ -8,7 +8,6 @@ import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
-import StarIcon from "@mui/icons-material/StarBorder";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
@@ -206,7 +205,6 @@ function PricingContent() {
                 title={b.title}
                 subheader={b.subheader}
                 titleTypographyProps={{ align: "center" }}
-                action={b.title === "shortfuts auto" ? <StarIcon /> : null}
                 subheaderTypographyProps={{
                   align: "center",
                   sx: {
@@ -317,7 +315,6 @@ function PricingContent() {
                 title={a.title}
                 subheader={a.subheader}
                 titleTypographyProps={{ align: "center" }}
-                action={a.title === "shortfuts auto" ? <StarIcon /> : null}
                 subheaderTypographyProps={{
                   align: "center",
                   sx: {
