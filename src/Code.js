@@ -126,9 +126,7 @@ export default function Code() {
                 shortfuts auto:{" "}
                 <span style={{ fontWeight: "bold" }}>
                   !claim {orderNumber} {email}
-                </span>{" "}
-                (this is unnecessary if you've already claimed your role in a
-                previous game)
+                </span>
               </li>
               <li>
                 Redeem your code in the app:{" "}
