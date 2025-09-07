@@ -282,7 +282,7 @@ function PricingContent() {
                   onClick={() => {
                     if (b.title === "shortfuts auto") {
                       window.open(
-                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-eafc-25",
+                        "https://shortfuts.myshopify.com/collections/frontpage/products/shortfuts-auto-for-eafc-26",
                         "_blank"
                       );
                     } else if (b.title === "keyboard shortfuts") {
